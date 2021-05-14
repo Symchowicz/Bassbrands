@@ -1,0 +1,40 @@
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    padding: 30px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav span img{
+    width: 20vw;
+}
+
+nav a {
+    font-weight : 600;
+    color : #000;
+}
+
+ul {
+    display: flex;
+    width: 60vw ;
+    justify-content: space-between;
+}
+
+input::placeholder{
+    color: #000;
+} 
+
+@media (max-width: 900px) {
+    nav span img{
+        width: 180px;
+    }
+}
