@@ -8,10 +8,10 @@ body {
 }
 
 nav {
-    padding: 30px 90px;
+    padding: 30px 200px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline ;
 }
 
 nav span img{
@@ -20,12 +20,13 @@ nav span img{
 
 nav a {
     font-weight : 600;
+    font-size: 30px;
     color : #000;
 }
 
 ul {
     display: flex;
-    width: 60vw ;
+    width: 50vw ;
     justify-content: space-between;
 }
 
