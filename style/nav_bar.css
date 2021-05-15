@@ -24,7 +24,11 @@ nav li, li > a{
     color : #000;
 }
 
-ul {
+nav li a {
+    color : #000;
+}
+
+nav ul {
     display: flex;
     width: 50vw ;
     justify-content: space-between;
