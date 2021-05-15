@@ -18,7 +18,7 @@ nav span img{
     width: 20vw;
 }
 
-nav a {
+nav li, li > a{
     font-weight : 600;
     font-size: 30px;
     color : #000;
@@ -30,9 +30,6 @@ ul {
     justify-content: space-between;
 }
 
-input::placeholder{
-    color: #000;
-} 
 
 @media (max-width: 900px) {
     nav span img{
