@@ -1,0 +1,106 @@
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+/* ---- Logo ----*/
+header .logo img{
+    width: 50%;
+}
+
+/* ---- Menu ----*/
+.menu .menu-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.menu li, li a{
+    color: black;
+    font-size: 12px;
+}
+
+/* -- Dropdown --*/
+.dropdownBtn{
+    border: none;
+    background-color: white;
+    font-size: 12px;
+}
+
+/*---- Section Présentation de la marque ----*/
+main .presentation{
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+/* ----Responsive Tablette 768 ----*/
+@media (min-width: 768px) {
+    body{
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 30px;
+    }
+
+    header .logo img{
+        width: 50%;
+    }
+
+    .menu{
+        width: 100%;
+    }
+
+    .menu .menu-list{
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .menu li, li a, .dropdownBtn{
+        font-size: 16px;
+    }
+
+}
+
+/*---- Responsive PC 1024----*/
+@media (min-width: 1024px) {
+    body{
+        margin: 30px 100px 0px 100px;
+    }
+
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header .logo img{
+        width: 70%;
+    }
+
+    .menu{
+        width: 50%;
+    }
+
+    .menu .menu-list{
+        justify-content: space-between;
+        gap: unset;
+    }
+
+    .menu li, li a{
+        font-size : 15px;
+    }
+
+    .dropdownBtn{
+        font-size: 15px;
+    }
+}
