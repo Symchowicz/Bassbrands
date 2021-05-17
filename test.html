@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+</header>
+
+<section>
+</section>
+
+</body>
+<script>
+    var header = document.querySelector('header');
+    var section = document.querySelector('section');
+
+    let requestUrl = 'https://raw.githubusercontent.com/Symchowicz/Bassbrands/main/JS/bassData.json';
+    let request = new XMLHttpRequest();
+    request.open('GET',requestUrl);
+
+    request.responseType = 'json';
+    request.send();
+
+    request.onload = function (){
+        var data = request.response;
+        populateHeader(data);
+        showHeroes(data);
+        console.log(data[0].marque);
+    }
+
+    function populateHeader(jsonObj){
+        var myH1 = document.createElement('h1');
+        myH1.textContent = jsonObj[0]['marque'];
+        header.appendChild(myH1);
+    }
+
+    function showHeroes(jsonObj) {
+        var data = jsonObj;
+        for (var i = 0; i < data.length; i++) {
+            if (data[i].marque === "Fender"){
+                var myArticle = document.createElement('article');
+                var myH2 = document.createElement('h2');
+                var myPara1 = document.createElement('p');
+                var myPara2 = document.createElement('p');
+
+                myH2.textContent = data[i].nom;
+                myPara1.textContent = 'marque: ' + data[i].marque;
+                myPara2.textContent = 'nom: ' + data[i].nom;
+                myArticle.appendChild(myH2);
+                myArticle.appendChild(myPara1);
+                myArticle.appendChild(myPara2);
+
+                section.appendChild(myArticle);
+            }
+
+        }
+    }
+</script>
+</html>
