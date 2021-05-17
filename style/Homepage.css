@@ -19,13 +19,13 @@ h1{
 }
 
 /*---- Les différentes marques ----*/
-.content {
+.banniere {
     display:grid;
     grid-template-rows: repeat(3, 1fr);
     grid-row-gap: 10px;
 }
 
-.content article{
+.banniere article{
     /*Background image*/
     background-image: url("../pics/background_fender.png");
     background-repeat: no-repeat;
@@ -37,25 +37,52 @@ h1{
     align-items: center;
     height: 20vw;
 }
-/* :nth-of-type() */
 
-.content article img:first-child {
+.banniere article img:first-child {
     width: 20%;
 }
 
-.vente ul {
-    padding: 50px 100px;
-    display: flex;
-    width: 60vw ;
+/*---- Meilleurs Vente ----*/
+.bestseller{
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
     justify-content: space-between;
+}
+
+.bestseller article{
+    justify-content: center;
+}
+.bestseller article img{
+    width:50%;
+    margin: 0 20px 0 20px;
 }
 
 /*---- Responsive Tablette ----*/
 @media(min-width: 768px){
+    h1{
+        font-size: 16px;
+    }
 
+    .presentation div{
+        font-size:20px;
+    }
+
+    .bestseller{
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+    }
 }
 
 /*---- Responsive PC ----*/
 @media(min-width: 1024px){
-
+    h1{
+        font-size: 20px;
+    }
+    .presentation div{
+        font-size:24px;
+    }
+    .bestseller{
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+    }
 }
