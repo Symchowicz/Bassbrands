@@ -1,6 +1,3 @@
-body{
-    width: 100vw;
-}
 section{
     padding: 0 200px 0 200px;
     margin-bottom: 100px;
@@ -15,8 +12,9 @@ section{
 }
 
 .first_section img{
-    width: 100%;
+    width: 120%;
     height: 70%;
+
 }
 
 /* Deuxieme section  */

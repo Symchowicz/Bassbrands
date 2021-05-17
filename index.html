@@ -6,21 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bassbrands</title>
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
-    <link rel="stylesheet" href="style/nav_bar.css">
+    <link rel="stylesheet" href="style/Fender.css">
     <link rel="stylesheet" href="style/Homepage.css">
+    <link rel="stylesheet" href="burger.css">
 
 </head>
 <body>
-    <nav>
-        <span><a href="index.html" title="page d'accueil"> <img src="./pics/Logo Bassbrands.svg" alt="Logo Bassbrands"></a></span>
-        <ul>
-            <li>Rechercher</li>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="">Nos marques</a></li>   
-            <li><a href="">Panier</a></li>         
-        </ul>      
-    </nav>
-
+    <header>
+        <div class="logo"><a href="index.html" title="page d'accueil"> <img id="logo" src="./pics/Logo Bassbrands.svg" alt="Logo Bassbrands"></a></div>
+        <nav class="menu">
+            <ul class="menu-list">
+                <li>Rechercher</li>
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <button class="dropdownBtn">Nos Marques</button>
+                    <div class="dropdown-content">
+                        <a href="">Fender</a>
+                        <a href="">Cort</a>
+                    </div>
+                </li>
+                <li><a href="">Panier</a></li>
+            </ul>
+        </nav>
+        <div class="burger">
+            <span></span>
+        </div>
+    </header>
     <section class = "first_section">
         <div>BENVENUE A BASSBRANDS<br>Nous regroupons les différentes marques de bass pour vous</div>
         <img src="./pics/freestocks-Fx5rrxSaUtI-unsplash.jpg" alt="image bass"> 

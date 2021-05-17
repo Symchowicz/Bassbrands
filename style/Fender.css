@@ -8,7 +8,7 @@ body {
     margin: 20px 20px 0 20px;
 }
 /* ---- Logo ----*/
-header .logo img{
+header .logo #logo{
     width: 50%;
 }
 
@@ -38,12 +38,12 @@ header .logo img{
 }
 
 /*---- Section Presentation de la marque ----*/
-main .presentation{
+/* main .presentation{
     background-color: orange;
     width: 200px;
     height: 200px;
     margin-top: 20px;
-}
+} */
 
 /* ---- Responsive Tablette 768 ----*/
 @media (min-width: 768px) {
@@ -51,7 +51,7 @@ main .presentation{
         margin: 30px 40px 0 40px;
     }
 
-    header .logo img{
+    header .logo #logo{
         width: 50%;
     }
 
@@ -110,7 +110,7 @@ main .presentation{
         justify-content: space-between;
     }
 
-    header .logo img{
+    header .logo #logo{
         width: 80%;
     }
 
