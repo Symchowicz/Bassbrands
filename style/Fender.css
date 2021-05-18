@@ -14,7 +14,7 @@ section{
 }
 
 /* ---- Logo ----*/
-header .logo #logo{
+#logo{
     width: 60%;
 }
 
@@ -98,14 +98,14 @@ header div:nth-of-type(1){
     transform: translateY(10px);
 }
 
-.burger.ouvert span{
+.burger.active span{
     background-color: transparent;
 }
 
-.burger.ouvert span::before{
+.burger.active span::before{
     transform: translateY(0px) rotateZ(45deg);
 }
-.burger.ouvert span::after{
+.burger.active span::after{
     transform: translateY(0px) rotateZ(-45deg);
 }
 
@@ -119,13 +119,16 @@ header div:nth-of-type(1){
     align-items: center;
     width: 100vw;
     transition: transform 1s;
-    z-index:-1;
+    z-index: -1;
+
 }
 
-.burger.ouvert div{
+.burger.active div{
     transform: translateY(50px);
     transition: transform 1s;
+    z-index: 2;
 }
+
 
 .burger a{
     cursor: pointer;
