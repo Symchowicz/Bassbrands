@@ -212,7 +212,7 @@ header div:nth-of-type(1){
 
 /*---- Responsive PC 1024----*/
 @media (min-width: 1024px) {
-    body{
+    main{
         margin: 30px 100px 0 100px;
     }
 
