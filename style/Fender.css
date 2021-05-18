@@ -7,6 +7,15 @@ body{
     font-family: sans-serif;
 }
 
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 75px;
+    justify-content: space-between;
+    background-color: #2E3341;
+}
+
 section{
     position: relative;
     z-index: -10;
@@ -50,23 +59,14 @@ header nav, .logo{
     padding-top: 18px
 }
 
-.menu{
-    display: none;
-}
-
-header{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 75px;
-    justify-content: space-between;
-    background-color: #2E3341;
-}
-
 header div:nth-of-type(1){
     height: 40px;
 }
 
+.menu{
+    display: none;
+}
+/*-- Transition / animation de l'icon burger--*/
 .burger{
     position: absolute;
     left: 0px;
@@ -74,6 +74,7 @@ header div:nth-of-type(1){
     height: 20px;
     cursor: pointer;
 }
+
 .burger span {
     position:relative;
     margin-top:25px;
@@ -113,6 +114,7 @@ header div:nth-of-type(1){
     transform: translateY(0px) rotateZ(-45deg);
 }
 
+/*-- menu burger visible --*/
 .burger div{
     background-color: #2E3341;
     position: relative;
@@ -154,41 +156,43 @@ header div:nth-of-type(1){
 @media (min-width: 768px) {
     header{
         display: block;
-        justify-content: none;
+        justify-content: unset;
         background-color: #2E3341;
         height: 170px;
     }
-    .menu{
-        display: block;
-    }
 
-    .burger{
-        display: none;
+    header div{
+        margin-bottom: 30px;
     }
 
     main{
         margin: 30px 100px 0 100px;
     }
-
-    header .logo #logo{
+    /*-- menu burger off--*/
+    .burger{
+        display: none;
+    }
+    /*-- logo --*/
+    #logo{
         width: 50%;
     }
 
     .logo{
         text-align: center;
     }
-
-    .iconPanier{
-        width: 30px;
-    }
-
+    /*-- Menu --*/
     .menu{
         width: 100%;
+        display: block;
     }
 
     .menu .menu-list{
         justify-content: center;
         gap: 50px;
+    }
+
+    .iconPanier{
+        width: 30px;
     }
     /* -- Dropdown  : https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp --*/
     .menu li, li a, .dropdownBtn{
@@ -236,14 +240,15 @@ header div:nth-of-type(1){
         justify-content: space-between;
     }
 
+    header div{
+        margin-bottom: unset;
+    }
+
+    /*-- Logo --*/
     #logo{
         width: 80%;
     }
-
-    .iconPanier{
-        width: 40px;
-    }
-
+    /*-- Menu --*/
     .menu{
         width: 50%;
         margin: 10px 70px 0 0;
@@ -254,6 +259,10 @@ header div:nth-of-type(1){
         gap: unset;
     }
 
+    .iconPanier{
+        width: 40px;
+    }
+    /*-- Menu dropdown--*/
     .menu li, li a, .dropdownBtn{
         font-size : 20px;
     }
