@@ -1,0 +1,52 @@
+footer{
+    position: relative;
+    width: 100vw;
+    height: 35vw;
+    background-color:#2E3341 ;
+    margin-top: 50px;
+}
+
+footer div:first-of-type, footer div ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+footer div:first-of-type img{
+ width:50% ;
+ color:#FDEF9C;
+}
+
+footer div:first-of-type ul{
+    position:absolute;
+    right: 0px;
+    width: 30%;
+}
+footer div:first-of-type ul img{
+    width: 8vw;
+}
+
+footer div:last-of-type{
+ align-content: center;
+}
+
+footer div:last-of-type a{
+    position:relative;
+    left: -7vw;
+    color:#FDEF9C;
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+/* ---- Responsive Tablette 768 ----*/
+@media (min-width: 768px) {
+    
+}
+
+/*---- Responsive PC 1024----*/
+@media (min-width: 1024px) {
+    
+}
