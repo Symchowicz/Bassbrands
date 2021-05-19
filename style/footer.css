@@ -1,20 +1,22 @@
 footer{
     position: absolute;
-    width: 100vw;
-    height: 35vw;
+    width: 100%;
     background-color:#2E3341 ;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .iconsFooter, .menuFooter ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin: 20px 20px;
 }
 
-.iconsFooter img{
+.iconsFooter{
+    margin: 20px 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#footerLogo{
  width:50% ;
  color:#FDEF9C;
 }
@@ -24,19 +26,25 @@ footer{
     flex-direction: row;
     position:absolute;
     top: 7vw;;
-    right: 0px;
+    right: 0;
     width: 30%;
 }
+
 .iconsFooter ul img{
     width: 8vw;
 }
 
 .menuFooter{
- align-content: center;
+    margin: 20px 20px;
+    align-content: center;
+}
+
+.menuFooter ul{
+    justify-content: center;
+    gap: 2rem;
 }
 
 .menuFooter a{
-    position:relative;
     color:#FDEF9C;
     font-family: roboto;
     font-weight: bold;
@@ -45,14 +53,49 @@ footer{
 
 /* ---- Responsive Tablette 768 ----*/
 @media (min-width: 768px) {
+    footer{
+        margin-top: 40px;
+    }
+
+    .iconsFooter, .menuFooter{
+        margin: 40px 40px;
+    }
+
     .iconsFooter ul{
-        top: 5vw;;
-        right: 0px;
+        top: 5vw;
+        right: 0;
         width: 30%;
+    }
+
+    .menuFooter ul{
+        gap: 5rem;
     }
 }
 
 /*---- Responsive PC 1024----*/
 @media (min-width: 1024px) {
-    
+    footer{
+        margin-top: 50px;
+    }
+
+    #footerLogo{
+        width: 40%;
+    }
+
+    .iconsFooter, .menuFooter{
+        margin: 40px 40px 50px 40px;
+    }
+
+    .iconsFooter ul{
+        position: absolute;
+        top: 3vw;
+        right: 0;
+        width: 30%;
+    }
+    .menuFooter a {
+        font-size: 2vw;
+    }
+    .menuFooter ul {
+        gap: 3rem;
+    }
 }
