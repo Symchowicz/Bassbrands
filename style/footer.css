@@ -24,9 +24,6 @@ footer{
 .iconsFooter ul{
     display: flex;
     flex-direction: row;
-    position:absolute;
-    top: 7vw;;
-    right: 0;
     width: 30%;
 }
 
@@ -62,8 +59,6 @@ footer{
     }
 
     .iconsFooter ul{
-        top: 5vw;
-        right: 0;
         width: 30%;
     }
 
@@ -79,23 +74,35 @@ footer{
     }
 
     #footerLogo{
-        width: 40%;
+        width: 30%;
     }
 
     .iconsFooter, .menuFooter{
-        margin: 40px 40px 50px 40px;
+        margin: 20px 20px 40px 20px;
+    }
+
+    .iconsFooter{
+        justify-content: center;
+        gap: 10rem;
     }
 
     .iconsFooter ul{
-        position: absolute;
-        top: 3vw;
-        right: 0;
+        position: relative;
+        justify-content: center;
         width: 30%;
     }
+
+    .iconsFooter ul img{
+        width: 4vw;
+    }
+
+    .menuFooter ul {
+        gap: 10rem;
+    }
+
     .menuFooter a {
         font-size: 2vw;
     }
-    .menuFooter ul {
-        gap: 3rem;
-    }
+
+
 }
