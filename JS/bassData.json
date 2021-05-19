@@ -2,7 +2,7 @@
   {
     "marque" : "Fender",
     "reference": "019-9012-781",
-    "image": "BassBrands/pics/Fender/ArticPearl.JPG",
+    "image": "BassBrands/pics/fender/ArticPearl.JPG",
     "nom": "FENDER AMERICAN ULTRA PRECISION BASS MN ARCTIC PEARL",
     "disponible": "true",
     "prix": "2114.00",
@@ -17,12 +17,13 @@
     "micro": "Noiseless Generation 7 ",
     "bouton de commande": "Knurled Flat-Top",
     "controle": "Volume principal, Sélecteur, Augmentation / correction des aigus, Amplification / Réduction des médiums, Augmentation / réduction des basses, Sélecteur actif / passif ",
-    "orientation": "droitier"
+    "orientation": "droitier",
+    "nbVente": "3"
   },
   {
     "marque": "Fender",
     "reference": "019-9012-773",
-    "image": "BassBrands/pics/Fender/PlasmaRedBurst.JPG",
+    "image": "BassBrands/pics/fender/PlasmaRedBurst.JPG",
     "nom": "FENDER AMERICAN ULTRA PRECISION BASS MN PLASMA RED BURST",
     "disponible": "true",
     "prix": "2299.00",
@@ -37,12 +38,13 @@
     "micro": "Noiseless Generation 7 ",
     "bouton de commande": "Knurled Flat-Top",
     "controle": "Volume principal, Sélecteur, Augmentation / correction des aigus, Amplification / Réduction des médiums, Augmentation / réduction des basses, Sélecteur actif / passif ",
-    "orientation": "droitier"
+    "orientation": "droitier",
+    "nbVente": "5"
   },
   {
     "marque": "Fender",
     "reference": "014-9612-354",
-    "image": "BassBrands/pics/Fender/DakotaRed.JPG",
+    "image": "BassBrands/pics/fender/DakotaRed.JPG",
     "nom": "FENDER VINTERA '50S PRECISION BASS MN DAKOTA RED",
     "disponible": "true",
     "prix": "1069.00",
@@ -57,7 +59,8 @@
     "micro": "Basse de précision à bobine simple et divisée des années 50",
     "bouton de commande": "Flat-Top moleté",
     "controle": "Volume général, Ton principal ",
-    "orientation": "droitier"
+    "orientation": "droitier",
+    "nbVente": "1"
   },
   {
     "marque": "Cort",
@@ -74,7 +77,8 @@
     "nombre de frettes": "20",
     "chevalet": "Vintage",
     "mecanique": "Open Gear",
-    "micro": "Jazz"
+    "micro": "Jazz",
+    "nbVente": "2"
   },
   {
     "marque": "Cort",
@@ -91,7 +95,8 @@
     "nombre de frettes": "20",
     "chevalet": "Vintage",
     "mecanique": "Open Gear",
-    "micro": "Voiced Tone VTB-ST"
+    "micro": "Voiced Tone VTB-ST",
+    "nbVente": "1"
   },
   {
     "marque": "Cort",
@@ -108,6 +113,7 @@
     "nombre de frettes": "21",
     "chevalet": "Omaga®",
     "mecanique": "Hipshot® Ultralite",
-    "micro": "Multitone & VTB-P Single-Coil"
+    "micro": "Multitone & VTB-P Single-Coil",
+    "nbVente": "3"
   }
 ]
