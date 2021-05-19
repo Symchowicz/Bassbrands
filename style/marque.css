@@ -1,0 +1,32 @@
+.presentation{
+    background-color: #FDEF9C;
+    padding: 20px;
+}
+
+.presentation img{
+    width: 30%;
+}
+/*
+.produit{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 200px);
+}
+*/
+.produit{
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    margin: unset;
+    padding:20px;
+}
+
+.produit article{
+    width:50%;
+}
+
+.produit img {
+    width: 100%;
+    align-items: center;
+}
+
