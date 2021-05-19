@@ -2,7 +2,7 @@
   {
     "marque" : "Fender",
     "reference": "019-9012-781",
-    "image": "../pics/Fender/ArticPearl.JPG",
+    "image": "pics/Fender/ArticPearl.JPG",
     "nom": "FENDER AMERICAN ULTRA PRECISION BASS MN ARCTIC PEARL",
     "disponible": "true",
     "prix": "2114.00",
@@ -22,7 +22,7 @@
   {
     "marque": "Fender",
     "reference": "019-9012-773",
-    "image": "../pics/Fender/PlasmaRedBurst.JPG",
+    "image": "pics/Fender/PlasmaRedBurst.JPG",
     "nom": "FENDER AMERICAN ULTRA PRECISION BASS MN PLASMA RED BURST",
     "disponible": "true",
     "prix": "2299.00",
@@ -42,7 +42,7 @@
   {
     "marque": "Fender",
     "reference": "014-9612-354",
-    "image": "../pics/Fender/DakotaRed.JPG",
+    "image": "pics/Fender/DakotaRed.JPG",
     "nom": "FENDER VINTERA '50S PRECISION BASS MN DAKOTA RED",
     "disponible": "true",
     "prix": "1069.00",
@@ -62,7 +62,7 @@
   {
     "marque": "Cort",
     "reference" : "GB34JJBK",
-    "image": "../pics/Cort/GlossBlack.JPG",
+    "image": "pics/Cort/GlossBlack.JPG",
     "nom": "CORT GB34JJ GLOSS BLACK",
     "disponible": "true",
     "prix": "349.00",
@@ -79,7 +79,7 @@
   {
     "marque": "Cort",
     "reference" : "GB64JJNAT",
-    "image": "../pics/Cort/NaturalGloss.JPG",
+    "image": "pics/Cort/NaturalGloss.JPG",
     "nom": "CORT GB64JJ NATURAL GLOSS",
     "disponible": "true",
     "prix": "545.00",
@@ -96,7 +96,7 @@
   {
     "marque": "Cort",
     "reference" : "GB74GIGLPB",
-    "image": "../pics/Cort/PlacidBlue.JPG",
+    "image": "pics/Cort/PlacidBlue.JPG",
     "nom": "CORT GB74 GIG LAKE PLACID BLUE",
     "disponible": "true",
     "prix": "759.00",
