@@ -18,7 +18,7 @@
     "bouton de commande": "Knurled Flat-Top",
     "controle": "Volume principal, Sélecteur, Augmentation / correction des aigus, Amplification / Réduction des médiums, Augmentation / réduction des basses, Sélecteur actif / passif ",
     "orientation": "droitier",
-    "nbVente": "3"
+    "nbVente": 4
   },
   {
     "marque": "Fender",
@@ -60,7 +60,7 @@
     "bouton de commande": "Flat-Top moleté",
     "controle": "Volume général, Ton principal ",
     "orientation": "droitier",
-    "nbVente": "1"
+    "nbVente": 1
   },
   {
     "marque": "Cort",
@@ -78,7 +78,7 @@
     "chevalet": "Vintage",
     "mecanique": "Open Gear",
     "micro": "Jazz",
-    "nbVente": "2"
+    "nbVente": 2
   },
   {
     "marque": "Cort",
@@ -96,7 +96,7 @@
     "chevalet": "Vintage",
     "mecanique": "Open Gear",
     "micro": "Voiced Tone VTB-ST",
-    "nbVente": "1"
+    "nbVente": 1
   },
   {
     "marque": "Cort",
@@ -114,6 +114,6 @@
     "chevalet": "Omaga®",
     "mecanique": "Hipshot® Ultralite",
     "micro": "Multitone & VTB-P Single-Coil",
-    "nbVente": "3"
+    "nbVente": 3
   }
 ]
