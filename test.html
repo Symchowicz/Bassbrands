@@ -44,13 +44,17 @@
                 var myH2 = document.createElement('h2');
                 var myPara1 = document.createElement('p');
                 var myPara2 = document.createElement('p');
+                var image = document.createElement('img');
 
                 myH2.textContent = data[i].nom;
                 myPara1.textContent = 'marque: ' + data[i].marque;
                 myPara2.textContent = 'nom: ' + data[i].nom;
+                image.setAttribute('src', data[i].image);
+
                 myArticle.appendChild(myH2);
                 myArticle.appendChild(myPara1);
                 myArticle.appendChild(myPara2);
+                myArticle.appendChild(image);
 
                 section.appendChild(myArticle);
             }
