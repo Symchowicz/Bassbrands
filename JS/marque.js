@@ -35,9 +35,9 @@ function brandFilter(jsonObj){
 
 /* Fonction qui gere tout ce qui est affichage */
 function showBass(bass){
-    for(var i =0; i <= bass.length; i++){
+    for(var i =0; i < bass.length; i++){
         // Création des balises html
-        var bassImage = document.createElement('img');
+        var myImage = document.createElement('div');
         var myArticle = document.createElement('article');
         var libelle = document.createElement('h2');
         var infos = document.createElement('div');
@@ -49,6 +49,7 @@ function showBass(bass){
         var ref = document.createElement('p');
 
         //Attribution de class
+        myImage.classList.add('myImage');
         libelle.classList.add('nom');
         infos.classList.add('infos');
         infoPrix.classList.add('infoPrix')
@@ -59,7 +60,7 @@ function showBass(bass){
         ref.classList.add('reference');
 
         // contenu des balises
-        bassImage.setAttribute('src', bass[i].image);
+        myImage.style.backgroundImage = "url('"+ bass[i].image + "')";
         libelle.textContent = bass[i].nom;
         prix.textContent = bass[i].prix + '€';
         prixInitial.textContent = 'au lieu de '+ bass[i]['prix initial'] + '€';
@@ -71,7 +72,7 @@ function showBass(bass){
         ref.textContent = "Réf : " + bass[i].reference;
 
         // Attribution balise à Arcticle
-        myArticle.appendChild(bassImage);
+        myArticle.appendChild(myImage);
         myArticle.appendChild(libelle);
         infoPrix.appendChild(prix);
         infoPrix.appendChild(prixInitial);

@@ -14,31 +14,40 @@
     margin-bottom: 20px;
 }
 
-/*-- Section: Aperçu des différentes produits --*/
+/*-- Section: Aperçu des différents produit --*/
 .produit{
-    padding-top: 20px;
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 40vw);
     justify-content: center;
     gap: 7vw;
+    width: 100%;
+    padding-top: 20px;
 }
 
-.produit.fender article{
+.produit article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    border: 1px solid;
+    border-color: grey;
+}
+
+.produit.fender article {
     height: 280px;
-    text-align: center;
-    position: relative;
 }
 
-.produit.cort article{
+.produit.cort article {
     height: 250px;
-    text-align: center;
-    position: relative;
 }
 
-.produit img {
-    width: auto;
+.myImage{
+    width: 100%;
     height: 180px;
+    /*background-image: url('../pics/fender/ArticPearl.JPG'); --> On récupere l'url dans le fichier js */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .nom{
@@ -49,18 +58,11 @@
 
 /* div informations */
 .infos{
-    text-align: justify;
     display: flex;
     justify-content: space-between;
     width: 100%;
     /*gap: 4vw;*/
-    position: absolute;
     bottom: 0;
-}
-
-/* prix */
-.infoPrix{
-    text-align: left;
 }
 
 .prix{
@@ -68,13 +70,8 @@
     font-size: 12px;
 }
 
-.prixInitial{
+.prixInitial, .infoDispo{
     font-size: 10px;
-}
-/* disponibilité */
-.infoDispo{
-    font-size: 10px;
-    text-align: right;
 }
 
 .reference{
@@ -99,32 +96,26 @@
     /*-- Section: Aperçu des différentes produits --*/
     .produit{
         grid-template-columns: repeat(2, 35vw);
-        gap: 6vw;
+        gap: 3vw;
+    }
+
+    .produit article{
+        padding: 10px;
     }
 
     .produit.fender article{
         height: 350px;
     }
 
-    .produit img {
-        width: auto;
+    .produit.cort article{
+        height : 320px;
+    }
+
+    .myImage{
         height: 250px;
     }
 
-    .nom{
-        font-size: 14px;
-    }
-
-    .infos{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        /*gap: 4vw;*/
-        position: absolute;
-        bottom: 0;
-    }
-
-    .prix{
+    .nom, .prix{
         font-size: 14px;
     }
 
@@ -150,33 +141,29 @@
 
     /*-- Section: Aperçu des différentes produits --*/
     .produit{
-        grid-template-columns: repeat(3, 15vw);
+        grid-template-columns: repeat(3, 20vw);
         /*gap: 6vw;*/
     }
 
+    .produit article{
+        padding: 15px;
+        justify-content: unset;
+        gap:2rem;
+    }
+
     .produit.fender article{
-        height: 400px;
+        height: 500px;
     }
 
-    .produit img {
-        width: auto;
-        height: 200px;
+    .produit.cort article{
+        height: 480px;
     }
 
-    .nom{
-        font-size: 18px;
+    .myImage{
+        height: 300px;
     }
 
-    .infos{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        /*gap: 4vw;*/
-        position: absolute;
-        bottom: 0;
-    }
-
-    .prix{
+    .nom, .prix{
         font-size: 18px;
     }
 
