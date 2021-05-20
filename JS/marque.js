@@ -69,7 +69,6 @@ function showBass(bass){
         ref.textContent = "Réf : " + bass[i].reference;
 
         // Attribution balise à Arcticle
-
         myArticle.appendChild(bassImage);
         myArticle.appendChild(libelle);
         infoPrix.appendChild(prix);

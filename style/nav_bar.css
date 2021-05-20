@@ -20,6 +20,7 @@ main{
     position: relative;
     z-index: -10;
     margin: 30px 20px 0 20px;
+    font-family: roboto;
 }
 
 /* ---- Logo ----*/
@@ -270,5 +271,11 @@ header div:nth-of-type(1){
     /*-- Menu dropdown--*/
     .menu li, li a, .dropdownBtn{
         font-size : 20px;
+    }
+}
+/*--*/
+@media (min-width: 1440px) {
+    main {
+        margin: 70px 300px 0 300px;
     }
 }
