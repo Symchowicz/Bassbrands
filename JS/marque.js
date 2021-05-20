@@ -21,11 +21,13 @@ function brandFilter(jsonObj){
     if(url ==="http://localhost:63342/Bassbrands/Fender.html"){
         var result = data.filter(bass => bass.marque ==='Fender');
         presentation.classList.add('fender');
+        section.classList.add('fender');
         showBass(result)
     }
     else if(url === 'http://localhost:63342/Bassbrands/Cort.html'){
         let result = data.filter(bass => bass.marque ==='Cort');
         presentation.classList.add('cort');
+        section.classList.add('cort');
         showBass(result);
     }
 }

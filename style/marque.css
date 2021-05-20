@@ -3,6 +3,7 @@
     background-color: #FDEF9C;
     padding: 20px;
     font-size: 12px;
+    text-align: justify;
 }
 
 .presentation img{
@@ -23,8 +24,14 @@
     gap: 7vw;
 }
 
-.produit article{
+.produit.fender article{
     height: 280px;
+    text-align: center;
+    position: relative;
+}
+
+.produit.cort article{
+    height: 250px;
     text-align: center;
     position: relative;
 }
@@ -35,14 +42,18 @@
 }
 
 .nom{
+    padding-top: 10px;
     font-size: 12px;
     text-align: center;
 }
 
 /* div informations */
 .infos{
+    text-align: justify;
     display: flex;
-    /*gap: 2rem;*/
+    justify-content: space-between;
+    width: 100%;
+    /*gap: 4vw;*/
     position: absolute;
     bottom: 0;
 }
@@ -84,6 +95,42 @@
     .presentation.cort img{
         margin-bottom: 30px;
     }
+
+    /*-- Section: Aperçu des différentes produits --*/
+    .produit{
+        grid-template-columns: repeat(2, 35vw);
+        gap: 6vw;
+    }
+
+    .produit.fender article{
+        height: 350px;
+    }
+
+    .produit img {
+        width: auto;
+        height: 250px;
+    }
+
+    .nom{
+        font-size: 15px;
+    }
+
+    .infos{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        /*gap: 4vw;*/
+        position: absolute;
+        bottom: 0;
+    }
+
+    .prix{
+        font-size: 15px;
+    }
+
+    .prixInitial, .stock, .reference{
+        font-size: 12px;
+    }
 }
 
 @media(min-width: 1024px) {
@@ -99,5 +146,41 @@
 
     .presentation.cort img{
         margin-bottom: 30px;
+    }
+
+    /*-- Section: Aperçu des différentes produits --*/
+    .produit{
+        grid-template-columns: repeat(3, 15vw);
+        /*gap: 6vw;*/
+    }
+
+    .produit.fender article{
+        height: 400px;
+    }
+
+    .produit img {
+        width: auto;
+        height: 200px;
+    }
+
+    .nom{
+        font-size: 18px;
+    }
+
+    .infos{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        /*gap: 4vw;*/
+        position: absolute;
+        bottom: 0;
+    }
+
+    .prix{
+        font-size: 18px;
+    }
+
+    .prixInitial, .stock, .reference{
+        font-size: 15px;
     }
 }
