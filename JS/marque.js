@@ -12,25 +12,27 @@ request.send();
 request.onload = function (){
     var data = request.response;
     brandFilter(data);
+
 }
 
 function brandFilter(jsonObj){
-    var data = jsonObj;
+    const data = jsonObj;
     let url = window.location.href;
     console.log(url);
-    if(url ==="http://localhost:63342/Bassbrands/Fender.html"){
-        var result = data.filter(bass => bass.marque ==='Fender');
+    if(url.includes('Fender.html')){
+        const result = data.filter(bass => bass.marque ==='Fender');
         presentation.classList.add('fender');
         section.classList.add('fender');
         showBass(result)
     }
-    else if(url === 'http://localhost:63342/Bassbrands/Cort.html'){
-        let result = data.filter(bass => bass.marque ==='Cort');
+    else if(url.includes('Cort.html')){
+        const  result = data.filter(bass => bass.marque ==='Cort');
         presentation.classList.add('cort');
         section.classList.add('cort');
         showBass(result);
     }
 }
+
 /* Fonction qui gere tout ce qui est affichage */
 function showBass(bass){
     for(var i =0; i <= bass.length; i++){
