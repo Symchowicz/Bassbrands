@@ -1,0 +1,89 @@
+main div ul{
+    display: none;
+}
+
+#retour{
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 20px; 
+}
+
+#Bass{
+    margin: 20px 20px ;
+    height: 300px;
+}
+
+article{
+    display: flex;
+    flex-direction: row;
+}
+
+h1{
+    font-size: 16px; 
+}
+
+h2{
+    font-size: 14px;
+}
+
+#description{
+    margin: 0 10px 10px 0;
+    font-family: roboto;
+    font-size: 12px;
+    
+}
+
+#coté_panier{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px 0 0;
+    float: right;
+}
+
+#prix{
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 20px; 
+}
+
+#prix_initial{
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 18px; 
+}
+
+#bouton_panier{
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+    background-color: #C4C4C4;
+    /* border: 1mm ridge #C4C4C4; */
+    border-radius:20px;
+    width: 35vw;
+    height: 5vh;
+}
+#bouton_panier div{
+    display: block;
+    text-align: center;
+}
+
+@media(min-width: 768px){
+    #retour{
+        display: none;
+    }
+    main div ul{
+        display: flex;
+        flex-direction: row;
+        font-family: roboto;
+        font-weight: bold;
+        font-size: 12px;
+    }  
+    main div ul li{
+        margin-right: 5px
+    }
+}
+
+/*---- Responsive PC ----*/
+@media(min-width: 1024px){
+    
+}
