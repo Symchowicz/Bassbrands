@@ -1,32 +1,103 @@
+/*-- Section : Presentation de la marque */
 .presentation{
     background-color: #FDEF9C;
     padding: 20px;
+    font-size: 12px;
 }
 
 .presentation img{
     width: 30%;
 }
-/*
-.produit{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(2, 200px);
+
+.presentation.cort img{
+    margin-bottom: 20px;
 }
-*/
+
+/*-- Section: Aperçu des différentes produits --*/
 .produit{
+    padding-top: 20px;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 140px);
-    margin: unset;
-    padding:20px;
+    grid-template-columns: repeat(2, 40vw);
+    justify-content: center;
+    gap: 7vw;
 }
 
 .produit article{
-    width:50%;
+    height: 280px;
+    text-align: center;
+    position: relative;
 }
 
 .produit img {
-    width: 100%;
-    align-items: center;
+    width: auto;
+    height: 180px;
 }
 
+.nom{
+    font-size: 12px;
+    text-align: center;
+}
+
+/* div informations */
+.infos{
+    display: flex;
+    /*gap: 2rem;*/
+    position: absolute;
+    bottom: 0;
+}
+
+/* prix */
+.infoPrix{
+    text-align: left;
+}
+
+.prix{
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.prixInitial{
+    font-size: 10px;
+}
+/* disponibilité */
+.infoDispo{
+    font-size: 11px;
+    text-align: right;
+}
+
+.reference{
+    font-size: 8px;
+}
+
+@media(min-width: 760px){
+    .presentation{
+        background-color: #FDEF9C;
+        padding: 30px;
+        font-size: 15px;
+    }
+
+    .presentation img{
+        width: 20%;
+    }
+
+    .presentation.cort img{
+        margin-bottom: 30px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .presentation{
+        background-color: #FDEF9C;
+        padding: 40px;
+        font-size: 18px;
+    }
+
+    .presentation img{
+        width: 15%;
+    }
+
+    .presentation.cort img{
+        margin-bottom: 30px;
+    }
+}

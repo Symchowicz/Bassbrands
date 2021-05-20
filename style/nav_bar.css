@@ -16,10 +16,10 @@ header{
     background-color: #2E3341;
 }
 
-section{
+main{
     position: relative;
     z-index: -10;
-    margin: 50px 20px 0 20px;
+    margin: 30px 20px 0 20px;
 }
 
 /* ---- Logo ----*/
