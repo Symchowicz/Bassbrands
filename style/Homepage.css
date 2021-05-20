@@ -1,15 +1,13 @@
 h1{
     margin: 30px 0 20px 0;
     font-size: 12px;
-    font-family: roboto;
     font-weight: bold;
 }
 
 /* ---- Presentation Site----*/
 .presentation div{
-    font-family: roboto;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 10px;
     text-align: center;
     margin: 20px 0 20px 0;
 }

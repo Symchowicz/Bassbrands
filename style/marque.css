@@ -73,7 +73,7 @@
 }
 /* disponibilité */
 .infoDispo{
-    font-size: 11px;
+    font-size: 10px;
     text-align: right;
 }
 
@@ -85,7 +85,7 @@
     .presentation{
         background-color: #FDEF9C;
         padding: 30px;
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .presentation img{
@@ -112,7 +112,7 @@
     }
 
     .nom{
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .infos{
@@ -125,7 +125,7 @@
     }
 
     .prix{
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .prixInitial, .stock, .reference{
