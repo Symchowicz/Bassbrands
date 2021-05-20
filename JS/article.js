@@ -4,14 +4,16 @@ request.open('GET',requestUrl);
 
 request.responseType = 'json';
 request.send();
-
 request.onload = function (){
     var data = request.response;
-    loadArticle(data[0])
-    const bouton = document.getElementById('bouton_panier')
+    loadArticle(data[0]);
+    var i = 0
+    const bouton = document.getElementById('bouton_panier');
     bouton.addEventListener('click', () => {
-        console.log('click');
-});
+        i++
+        localStorage.setItem(i, data[0]);
+        console.log(localStorage)
+    });
 }
 
 function loadArticle(jsonObj){
