@@ -23,6 +23,7 @@ h1{
 }
 
 h2{
+    padding: 10px 0 10px 0;
     font-size: 14px;
 }
 
@@ -30,7 +31,7 @@ h2{
     margin: 0 10px 10px 0;
     font-family: roboto;
     font-size: 12px;
-    
+    text-align: justify;
 }
 
 #coté_panier{
@@ -55,35 +56,79 @@ h2{
 #bouton_panier{
     display: flex;
     flex-direction: row;
-    justify-content: center ;
-    background-color: #C4C4C4;
-    /* border: 1mm ridge #C4C4C4; */
+    justify-content: center;
+    align-items: center;
+    background-color: #FDEF9C;
+    border: 1mm ridge #FDEF9C;
     border-radius:20px;
-    width: 35vw;
-    height: 5vh;
-}
-#bouton_panier div{
-    display: block;
-    text-align: center;
+    width: 100px;
+    height: 4vh;
 }
 
 @media(min-width: 768px){
     #retour{
         display: none;
     }
+
     main div ul{
         display: flex;
         flex-direction: row;
         font-family: roboto;
         font-weight: bold;
         font-size: 12px;
+        margin-bottom:20px ;
     }  
+
     main div ul li{
         margin-right: 5px
+    }
+
+    h1{
+        font-size: 22px; 
+    }
+    
+    h2{
+        margin: 10px 0 5px 0;
+        font-size: 20px;
+    }
+    
+    #description{
+        font-size: 16px;
+    }
+
+    #prix{
+        font-size: 24px; 
+    }
+    
+    #prix_initial{
+        font-size: 20px; 
+    }
+
+    #bouton_panier{
+        width: 200px;
     }
 }
 
 /*---- Responsive PC ----*/
 @media(min-width: 1024px){
+    h1{
+        font-size: 22px; 
+    }
     
+    h2{
+        margin: 10px 0 5px 0;
+        font-size: 20px;
+    }
+    
+    #description{
+        font-size: 16px;
+    }
+
+    #prix{
+        font-size: 24px; 
+    }
+    
+    #prix_initial{
+        font-size: 20px; 
+    }
 }

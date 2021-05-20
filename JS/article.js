@@ -22,6 +22,6 @@ function loadArticle(jsonObj){
     image.setAttribute('alt', jsonObj.nom);
     document.querySelector('h1').innerHTML = jsonObj.nom;
     document.getElementById('description').innerHTML = jsonObj.description;
-    document.getElementById('prix').innerHTML = jsonObj.prix;
-    document.getElementById('prix_initial').innerHTML = 'au lieu de ' + jsonObj['prix initial'];
+    document.getElementById('prix').innerHTML = jsonObj.prix + "€";
+    document.getElementById('prix_initial').innerHTML = 'au lieu de ' + jsonObj['prix initial'] + "€";
 }
