@@ -1,21 +1,22 @@
-let requestUrl = 'https://raw.githubusercontent.com/Symchowicz/Bassbrands/main/JS/bassData.json';
-let request = new XMLHttpRequest();
-request.open('GET',requestUrl);
 
-request.responseType = 'json';
-request.send();
-request.onload = function (){
-    var data = request.response;
-    loadArticle(data[0]);
-    var i = 0
-    const bouton = document.getElementById('bouton_panier');
-    bouton.addEventListener('click', () => {
-        i++
-        localStorage.setItem(i, data[0]);
-        console.log(localStorage)
-    });
+export function loadata(ref){
+    let requestUrl = 'https://raw.githubusercontent.com/Symchowicz/Bassbrands/main/JS/bassData.json';
+    let request = new XMLHttpRequest();
+    request.open('GET',requestUrl);
+
+    request.responseType = 'json';
+    request.send();
+    request.onload = function (){
+        var data = request.response;
+        loadArticle(data[0]);
+        var i = 0
+        const bouton = document.getElementById('bouton_panier');
+        bouton.addEventListener('click', () => {
+            localStorage.setItem(localStorage.length++, JSON.stringify(data[i]));
+            console.log(localStorage)
+        });
+    }
 }
-
 function loadArticle(jsonObj){
     document.getElementById('cheminMarque').innerHTML = jsonObj.marque + ' >';
     document.getElementById('cheminNom').innerHTML = jsonObj.nom;

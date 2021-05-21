@@ -12,7 +12,6 @@ request.send();
 request.onload = function (){
     var data = request.response;
     brandFilter(data);
-
 }
 
 function brandFilter(jsonObj){
@@ -37,8 +36,9 @@ function brandFilter(jsonObj){
 function showBass(bass){
     for(var i =0; i < bass.length; i++){
         // Création des balises html
-        var myImage = document.createElement('div');
         var myArticle = document.createElement('article');
+        var myLink = document.createElement('a');
+        var myImage = document.createElement('div');
         var libelle = document.createElement('h2');
         var infos = document.createElement('div');
         var infoPrix = document.createElement('div');
@@ -60,6 +60,8 @@ function showBass(bass){
         ref.classList.add('reference');
 
         // contenu des balises
+        myLink.setAttribute('href', bass[i].marque+i+".html");
+        console.log(myLink);
         myImage.style.backgroundImage = "url('"+ bass[i].image + "')";
         libelle.textContent = bass[i].nom;
         prix.textContent = bass[i].prix + '€';
@@ -72,15 +74,18 @@ function showBass(bass){
         ref.textContent = "Réf : " + bass[i].reference;
 
         // Attribution balise à Arcticle
-        myArticle.appendChild(myImage);
-        myArticle.appendChild(libelle);
+        myLink.appendChild(myImage)
+        myLink.appendChild(myImage);
+        myLink.appendChild(libelle);
         infoPrix.appendChild(prix);
         infoPrix.appendChild(prixInitial);
         infoDispo.appendChild(stock);
         infoDispo.appendChild(ref);
         infos.appendChild(infoPrix);
         infos.appendChild(infoDispo);
-        myArticle.appendChild(infos);
+        myLink.appendChild(infos);
+        myArticle.appendChild(myLink);
         section.appendChild(myArticle);
     }
 }
+

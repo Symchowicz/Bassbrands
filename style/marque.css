@@ -25,20 +25,25 @@
 }
 
 .produit article{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 5px;
     border: 1px solid;
     border-color: grey;
+    padding: 5px
 }
 
-.produit.fender article {
+
+.produit.fender a {
     height: 280px;
 }
 
-.produit.cort article {
+.produit.cort a {
     height: 250px;
+}
+
+.produit a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: black;
 }
 
 .myImage{
@@ -103,11 +108,11 @@
         padding: 10px;
     }
 
-    .produit.fender article{
+    .produit.fender a{
         height: 350px;
     }
 
-    .produit.cort article{
+    .produit.cort a{
         height : 320px;
     }
 
@@ -151,11 +156,11 @@
         gap:2rem;
     }
 
-    .produit.fender article{
+    .produit.fender a{
         height: 500px;
     }
 
-    .produit.cort article{
+    .produit.cort a{
         height: 480px;
     }
 
