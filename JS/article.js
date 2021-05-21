@@ -11,7 +11,7 @@ request.onload = function (){
     const bouton = document.getElementById('bouton_panier');
     bouton.addEventListener('click', () => {
         i++
-        localStorage.setItem(i, data[0]);
+        localStorage.setItem(i, data[0].reference);
         console.log(localStorage)
     });
 }
