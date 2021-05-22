@@ -7,4 +7,64 @@ h1{
     font-size: 20px;
     font-family: roboto;
     font-weight: bold; 
+    margin: 10px 0 30px 10px;
+}
+
+h2{
+    font-size: 16px;
+    font-family: roboto;
+    font-weight: bold; 
+}
+article{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+article > div:last-of-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+article > div:last-of-type > div:last-of-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+
+}
+
+article > div:last-of-type > div:last-of-type > div:first-of-type{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 5px 10px;
+    width: 116px;
+}
+
+article > div:last-of-type > div:last-of-type > div:first-of-type >span{
+    font-size: 20px;
+    font-family: roboto;
+    font-weight: bold; 
+}
+
+article > div:last-of-type > div:last-of-type > div:last-of-type{
+    display: flex;
+    justify-content: space-between;
+}
+
+article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
+    font-size: 16px;
+    font-family: roboto;
+    font-weight: bold; 
+}
+
+#plus0, #plus1, #plus2, #plus3, #plus4, #plus5 {
+    font-size: 20px;
+    margin: 0 48px 0 10px;
+}
+#moins0, #moins1, #moins2, #moins3, #moins4, #moins5{
+    font-size: 20px;
+    padding: 0 5px 0 5px;
 }
