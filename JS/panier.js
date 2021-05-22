@@ -1,4 +1,3 @@
-var contenuPanier = [0,0,0,0,0,0];
 var storedBass = []
 
 /* window.addEventListener('storage', () => {
@@ -19,8 +18,7 @@ function storeBass(){
     }
 }
 
-contentPanier(contenuPanier)
-loadArticle(storedBass, contenuPanier)
+loadArticle(storedBass)
 
 const poubelle = document.getElementsByClassName('poubelle')
 
@@ -46,45 +44,15 @@ for (let i = 0; i < poubelle.length; i++){
     }
 } */
 
-function contentPanier(contenuPanier){
-    var i = 0
-    while(storedBass[i] != null){
-        switch(storedBass[i].reference){
-            case "019-9012-781":
-                contenuPanier[0]++ 
-                break;
-            case "019-9012-773":
-                contenuPanier[1]++ 
-                break;
-            case "014-9612-354":
-                contenuPanier[2]++ 
-                break;
-            case "GB34JJBK":
-                contenuPanier[3]++ 
-                break;
-            case "GB64JJNAT":
-                contenuPanier[4]++
-                break; 
-            case "GB74GIGLPB":
-                contenuPanier[5]++
-                break;
-            default:
-                console.log("Réf indispo")           
-        }
-        i++
-    }
-}
-function loadArticle(storedBass, contenuPanier){
+function loadArticle(storedBass){
     const main = document.querySelector('main');
-    var numberItemsNull = contenuPanier.filter(quantite => quantite == 0)
-    console.log(numberItemsNull)
     if(localStorage.length===0){
         var p = document.createElement('p')
         p.innerHTML = 'Panier Vide'
         main.appendChild(p)
     }else{
-        for(let i in contenuPanier){
-            if (contenuPanier[i] != 0){
+        for(let i in storedBass){
+            if (storedBass[i] != 0){
                 var myArticle = document.createElement('article');
                 myArticle.classList = storedBass[i]["reference"]
 
