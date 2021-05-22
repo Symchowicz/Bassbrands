@@ -15,10 +15,13 @@ h2{
     font-family: roboto;
     font-weight: bold; 
 }
+
 article{
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
+    background-color: #FDEF9C;
+    border: solid black;
 }
 
 article > div:last-of-type{
@@ -27,26 +30,29 @@ article > div:last-of-type{
     justify-content: space-between;
 }
 
+article > div:last-of-type > div:first-of-type > span{
+    font-size: 14px;    
+}
 
 article > div:last-of-type > div:last-of-type{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: right;
-
+    width: 50vw;
 }
 
 article > div:last-of-type > div:last-of-type > div:first-of-type{
     display: flex;
     justify-content: space-between;
-    margin: 0 0 5px 10px;
-    width: 116px;
+    margin: 0 0 5px 5px;
+    width: 100px;
 }
 
 article > div:last-of-type > div:last-of-type > div:first-of-type >span{
     font-size: 20px;
     font-family: roboto;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 article > div:last-of-type > div:last-of-type > div:last-of-type{
@@ -57,14 +63,162 @@ article > div:last-of-type > div:last-of-type > div:last-of-type{
 article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
     font-size: 16px;
     font-family: roboto;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 #plus0, #plus1, #plus2, #plus3, #plus4, #plus5 {
     font-size: 20px;
-    margin: 0 48px 0 10px;
+    margin: 0 25px 0 5px;
 }
 #moins0, #moins1, #moins2, #moins3, #moins4, #moins5{
     font-size: 20px;
     padding: 0 5px 0 5px;
+}
+
+
+/*---- Responsive Tablette ----*/
+@media(min-width: 768px){
+    article > div > img{
+        margin: 30px 30px ;
+        height: 350px;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    article > div:last-of-type > div:last-of-type{
+        width: 52vw;
+    }
+    
+    article > div:last-of-type > div:first-of-type > span{
+        font-size: 18px;    
+    }
+
+    #poubelle0, #poubelle1, #poubelle2, #poubelle3, #poubelle4, #poubelle5 {
+        height: 60px;
+    }
+
+    article > div:last-of-type > div:last-of-type > div:first-of-type >span{
+        font-size: 23px;
+    }
+
+    article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
+        font-size: 20px;
+    }
+
+    article > div:last-of-type > div:last-of-type > div:first-of-type{
+        width: 205px;
+    }
+
+    #plus0, #plus1, #plus2, #plus3, #plus4, #plus5 {
+        font-size: 24px;
+        margin: 0 115px 0 5px;
+        cursor: pointer;
+    }
+    #moins0, #moins1, #moins2, #moins3, #moins4, #moins5{
+        font-size: 24px;
+        padding: 0 5px 0 5px;
+        cursor: pointer;
+    }
+}
+
+/*---- Responsive PC ----*/
+@media(min-width: 1024px){
+    article > div > img{
+        margin-bottom: 40px ;
+        height: 400px;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+
+    h2{
+        font-size: 29px;
+    }
+
+    article{
+        width: 75vw;
+    }
+
+    article > div:last-of-type > div:first-of-type > span{
+        font-size: 20px;    
+    }
+
+    #poubelle0, #poubelle1, #poubelle2, #poubelle3, #poubelle4, #poubelle5 {
+        height: 70px;
+    }
+
+    article > div:last-of-type > div:last-of-type > div:first-of-type >span{
+        font-size: 28px;
+    }
+
+    article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
+        font-size: 25px;
+    }
+
+    article > div:last-of-type > div:last-of-type > div:first-of-type{
+        width: 305px;
+    }
+
+    #plus0, #plus1, #plus2, #plus3, #plus4, #plus5 {
+        font-size: 24px;
+        margin: 0 200px 0 5px;
+        cursor: pointer;
+    }
+    #moins0, #moins1, #moins2, #moins3, #moins4, #moins5{
+        font-size: 24px;
+        padding: 0 5px 0 5px;
+        cursor: pointer;
+    }
+}
+
+@media(min-width: 1440px){
+    h1{
+        font-size: 35px;
+    }
+
+    h2{
+        font-size: 29px;
+    }
+
+    article > div:last-of-type > div:last-of-type{
+        width: 61vw;
+    }
+
+    article > div:last-of-type > div:first-of-type > span{
+        font-size: 20px;    
+    }
+
+    #poubelle0, #poubelle1, #poubelle2, #poubelle3, #poubelle4, #poubelle5 {
+        height: 70px;
+    }
+
+    article > div:last-of-type > div:last-of-type > div:first-of-type >span{
+        font-size: 28px;
+    }
+
+    article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
+        font-size: 25px;
+    }
+
+    article > div:last-of-type > div:last-of-type > div:first-of-type{
+        width: 305px;
+    }
+
+    #plus0, #plus1, #plus2, #plus3, #plus4, #plus5 {
+        font-size: 24px;
+        margin: 0 200px 0 5px;
+        cursor: pointer;
+    }
+    #moins0, #moins1, #moins2, #moins3, #moins4, #moins5{
+        font-size: 24px;
+        padding: 0 5px 0 5px;
+        cursor: pointer;
+    }
 }

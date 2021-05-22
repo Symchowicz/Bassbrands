@@ -1,14 +1,8 @@
 var storedBass = []
 
-/* window.addEventListener('storage', () => {
-    contenuPanier = [0,0,0,0,0,0];
-    console.log("YOLO")
-    document.queryselector('main').reset()
-    contentPanier(contenuPanier)
-    loadArticle(storedBass, contenuPanier)
-}); */
-
 storeBass()
+loadArticle(storedBass)
+setButton(storedBass)
 
 function storeBass(){
     for(let i in localStorage){
@@ -17,32 +11,6 @@ function storeBass(){
         }   
     }
 }
-
-loadArticle(storedBass)
-
-const poubelle = document.getElementsByClassName('poubelle')
-
-for (let i = 0; i < poubelle.length; i++){
-    poubelle[i].addEventListener('click', () => {
-        localStorage.clear()
-        window.location.reload()
-    });
-}
-
-
-/* request.onload = function (){
-    var data = request.response; 
-    contentPanier(contenuPanier);
-    loadArticle(data, contenuPanier);
-    
-    const poubelle = document.getElementsByClassName('poubelle')
-    console.log(poubelle)
-    for (let i = 0; i < poubelle.length; i++){
-        poubelle[i].addEventListener('click', () => {
-            localStorage.clear()
-        });
-    }
-} */
 
 function loadArticle(storedBass){
     const main = document.querySelector('main');
@@ -54,7 +22,6 @@ function loadArticle(storedBass){
         for(let i in storedBass){
             if (storedBass[i] != 0){
                 var myArticle = document.createElement('article');
-                myArticle.classList = storedBass[i]["reference"]
 
                 var img = document.createElement('img');
                 img.setAttribute('src', storedBass[i].image);
@@ -66,27 +33,27 @@ function loadArticle(storedBass){
                 ref.innerHTML = storedBass[i].reference
 
                 var qte = document.createElement('span')
-                qte.innerHTML = 'qté'
+                qte.innerHTML = 'qtÃ©'
 
                 var prix = document.createElement('span')
                 prix.innerHTML = 'Prix'
 
                 var moins = document.createElement('span')
-                moins.classList = "moins"
+                moins.id = "moins" + i
                 moins.innerHTML = '-'
                 
                 var quantite = document.createElement('span')
                 quantite.innerHTML = storedBass[i].qte
 
                 var plus = document.createElement('span')
-                plus.classList = "plus"
+                plus.id = "plus" + i
                 plus.innerHTML = '+'
 
                 var prixArticle = document.createElement('span')
-                prixArticle.innerHTML = storedBass[i].prix * storedBass[i].qte
+                prixArticle.innerHTML = storedBass[i].prix * storedBass[i].qte + "€"
 
-                var poubelle = document.createElement('img')
-                poubelle.classList = "poubelle"
+                const poubelle = document.createElement('img')
+                poubelle.id = "poubelle" + i
             
                 poubelle.setAttribute('src', "./pics/trash.svg");
 
@@ -106,10 +73,11 @@ function loadArticle(storedBass){
                 div3.appendChild(qte)
                 div3.appendChild(prix)
 
-                div4.appendChild(moins)
-                div4.appendChild(quantite)
-                div4.appendChild(plus)
-                div4.appendChild(prixArticle)
+                div7.appendChild(moins)
+                div7.appendChild(quantite)
+                div7.appendChild(plus)
+                div7.appendChild(prixArticle)
+                div4.appendChild(div7)
                 div4.appendChild(poubelle)
 
                 div5.appendChild(div3)
@@ -121,9 +89,171 @@ function loadArticle(storedBass){
                 myArticle.appendChild(div1)
                 myArticle.appendChild(div6)
 
-                main.appendChild(myArticle);  
+                main.appendChild(myArticle);   
             }
         }
     }
 }
 
+function setButton(storedBass){
+    for(let i = 0; i < 6; i++){
+        switch(i){
+            case 0:
+                const poubelle0 = document.getElementById('poubelle' + i)
+                const moins0 = document.getElementById('moins' + i)
+                const plus0 = document.getElementById('plus' + i)
+                if(poubelle0 != null){
+                    moins0.addEventListener('click', () => { 
+                        storedBass[i].qte--
+                        if(storedBass[i].qte == 0){
+                            localStorage.removeItem(storedBass[i].reference)
+                        }else{
+                            localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        }
+                        window.location.reload()
+                    });
+                    plus0.addEventListener('click', () => {  
+                        storedBass[i].qte++
+                        localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        window.location.reload()
+                    });
+                    poubelle0.addEventListener('click', () => {  
+                        localStorage.removeItem(storedBass[i].reference)
+                        window.location.reload()
+                    });
+                }
+                break;
+            case 1:
+                const poubelle1 = document.getElementById('poubelle' + i)
+                const moins1 = document.getElementById('moins' + i)
+                const plus1 = document.getElementById('plus' + i)
+                if(poubelle1 != null){
+                    moins1.addEventListener('click', () => {
+                        storedBass[i].qte--
+                        if(storedBass[i].qte == 0){
+                            localStorage.removeItem(storedBass[i].reference)
+                        }else{
+                            localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        }
+                        window.location.reload()
+                    });
+                    plus1.addEventListener('click', () => {
+                        storedBass[i].qte++
+                        localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        window.location.reload()
+                    });
+                    poubelle1.addEventListener('click', () => {  
+                        localStorage.removeItem(storedBass[i].reference)
+                        window.location.reload()
+                    });
+                }
+                break;
+            case 2:   
+                const poubelle2 = document.getElementById('poubelle' + i)
+                const moins2 = document.getElementById('moins' + i)
+                const plus2 = document.getElementById('plus' + i)
+                if(poubelle2 != null){
+                    moins2.addEventListener('click', () => {  
+                        storedBass[i].qte--
+                        if(storedBass[i].qte == 0){
+                            localStorage.removeItem(storedBass[i].reference)
+                        }else{
+                            localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        }
+                        window.location.reload()
+                    });
+                    plus2.addEventListener('click', () => { 
+                        storedBass[i].qte++ 
+                        localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        window.location.reload()
+                    });
+                    poubelle2.addEventListener('click', () => {   
+                        localStorage.removeItem(storedBass[i].reference)
+                        window.location.reload() 
+                    });
+                }
+                break;
+            case 3:
+                const poubelle3 = document.getElementById('poubelle' + i)
+                const moins3 = document.getElementById('moins' + i)
+                const plus3 = document.getElementById('plus' + i)
+                if(poubelle3 != null){
+                    moins3.addEventListener('click', () => {  
+                        storedBass[i].qte--
+                        if(storedBass[i].qte == 0){
+                            localStorage.removeItem(storedBass[i].reference)
+                        }else{
+                            localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        }
+                        window.location.reload()
+                    });
+                    plus3.addEventListener('click', () => {  
+                        storedBass[i].qte++
+                        localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        window.location.reload()
+                    });
+                    if(poubelle3 != null){    
+                        poubelle3.addEventListener('click', () => {
+                            localStorage.removeItem(storedBass[i].reference)
+                            window.location.reload()
+                        });
+                    }
+                }
+                break;
+            case 4:
+                const poubelle4 = document.getElementById('poubelle' + i)
+                const moins4 = document.getElementById('moins' + i)
+                const plus4 = document.getElementById('plus' + i)
+                if(poubelle4 != null){
+                    moins4.addEventListener('click', () => {
+                        storedBass[i].qte--  
+                        if(storedBass[i].qte == 0){
+                            localStorage.removeItem(storedBass[i].reference)
+                        }else{
+                            localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        }
+                        window.location.reload()
+                    });
+                    plus4.addEventListener('click', () => {  
+                        storedBass[i].qte++
+                        localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        window.location.reload()
+                    });
+                    if(poubelle4 != null){
+                        poubelle4.addEventListener('click', () => {  
+                            localStorage.removeItem(storedBass[i].reference)
+                            window.location.reload()
+                        });
+                    }
+                }
+                break; 
+            case 5: 
+                const poubelle5 = document.getElementById('poubelle' + i)
+                const moins5 = document.getElementById('moins' + i)
+                const plus5 = document.getElementById('plus' + i)
+                if(poubelle5 != null){
+                    moins5.addEventListener('click', () => {  
+                        storedBass[i].qte--
+                        if(storedBass[i].qte == 0){
+                            localStorage.removeItem(storedBass[i].reference)
+                        }else{
+                            localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        }
+                        window.location.reload()
+                    });
+                    plus5.addEventListener('click', () => {  
+                        storedBass[i].qte++
+                        localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        window.location.reload()
+                    });
+                    poubelle5.addEventListener('click', () => { 
+                        localStorage.removeItem(storedBass[i].reference)
+                        window.location.reload()
+                    });
+                }
+                break;
+            default:
+                console.log("Réf indispo")           
+        }          
+    }
+}
