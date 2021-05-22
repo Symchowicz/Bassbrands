@@ -1,23 +1,28 @@
-let requestUrl = 'https://raw.githubusercontent.com/Symchowicz/Bassbrands/main/JS/bassData.json';
-let request = new XMLHttpRequest();
-request.open('GET',requestUrl);
+export function article(reference){
+    let requestUrl = 'https://raw.githubusercontent.com/Symchowicz/Bassbrands/main/JS/bassData.json';
+    let request = new XMLHttpRequest();
+    request.open('GET',requestUrl);
 
-request.responseType = 'json';
-request.send();
-request.onload = function (){
-    var data = request.response;
-    loadArticle(data[0]);
-    const bouton = document.getElementById('bouton_panier');
-    bouton.addEventListener('click', () => {
-        localStorage.setItem(localStorage.length++, JSON.stringify(data[0]));
-        console.log(localStorage)
-    });
+    request.responseType = 'json';
+    request.send();
+    request.onload = function (){
+        var data = request.response;
+        var bassindex = data.findIndex(bass => bass.reference === reference)
+        var bassArticle = data[bassindex];
+        loadArticle(bassArticle);
+        const bouton = document.getElementById('bouton_panier');
+        bouton.addEventListener('click', () => {
+            //TODO Systéme de clé incrementation
+        });
+
+    }
 }
+
 
 function loadArticle(jsonObj){
     document.getElementById('cheminMarque').innerHTML = jsonObj.marque + ' >';
     document.getElementById('cheminNom').innerHTML = jsonObj.nom;
-    image = document.getElementById('Bass')
+    var image = document.getElementById('Bass')
     image.setAttribute('src', jsonObj.image);
     image.setAttribute('alt', jsonObj.nom);
     document.querySelector('h1').innerHTML = jsonObj.nom;
