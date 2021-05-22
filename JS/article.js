@@ -13,6 +13,16 @@ export function article(reference){
         const bouton = document.getElementById('bouton_panier');
         bouton.addEventListener('click', () => {
             //TODO Systéme de clé incrementation
+            let azs = localStorage.getItem(bassArticle.reference)
+            if(azs){
+                let obj = JSON.parse(azs);
+                console.log(obj.qte)
+                obj.qte++;
+                localStorage.removeItem(bassArticle.reference);
+                localStorage.setItem(bassArticle.reference, JSON.stringify(obj));
+            }else{
+                localStorage.setItem(bassArticle.reference, JSON.stringify(bassArticle));
+            }
         });
 
     }
