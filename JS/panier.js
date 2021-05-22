@@ -78,7 +78,7 @@ function loadArticle(storedBass, contenuPanier){
     const main = document.querySelector('main');
     var numberItemsNull = contenuPanier.filter(quantite => quantite == 0)
     console.log(numberItemsNull)
-    if(contenuPanier.length === numberItemsNull.length){
+    if(localStorage.length===0){
         var p = document.createElement('p')
         p.innerHTML = 'Panier Vide'
         main.appendChild(p)
@@ -108,14 +108,14 @@ function loadArticle(storedBass, contenuPanier){
                 moins.innerHTML = '-'
                 
                 var quantite = document.createElement('span')
-                quantite.innerHTML = contenuPanier[i]
+                quantite.innerHTML = storedBass[i].qte
 
                 var plus = document.createElement('span')
                 plus.classList = "plus"
                 plus.innerHTML = '+'
 
                 var prixArticle = document.createElement('span')
-                prixArticle.innerHTML = storedBass[i].prix * contenuPanier[i]
+                prixArticle.innerHTML = storedBass[i].prix * storedBass[i].qte
 
                 var poubelle = document.createElement('img')
                 poubelle.classList = "poubelle"
