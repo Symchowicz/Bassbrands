@@ -101,7 +101,6 @@ function loadArticle(storedBass){
         var ligne = document.createElement('div')
         ligne.id = "ligne"
         var qteTotal = document.createElement('div')
-        qteTotal.innerHTML = "Nombre d'article : " + nombreArticle
         var prixTotal = document.createElement('div')
         prixTotal.innerHTML = "Prix Total : " + prixCommande + "€"
         var boutonCommande = document.createElement('div')
@@ -111,6 +110,95 @@ function loadArticle(storedBass){
         main.appendChild(qteTotal);
         main.appendChild(prixTotal)
         main.appendChild(boutonCommande)
+
+        /* Le formulaire : */
+        var section = document.createElement('section')
+        var form = document.createElement('form')
+        form.setAttribute('methode', "POST");
+        form.setAttribute('action', "don'tknow_j'improMDR.html");
+        form.id = 'Formulaire'
+        
+
+        /* Section Nom */
+        var divNom = document.createElement('div')
+        var labelNom = document.createElement('label')
+        labelNom.setAttribute('for', "nom");
+        labelNom.innerHTML = 'Nom : '
+        var InputLabelNom = document.createElement('input')
+        InputLabelNom.setAttribute('type', "text");
+        InputLabelNom.setAttribute('name', "nom");
+        InputLabelNom.setAttribute('placeholder', "Votre nom");
+        divNom.appendChild(labelNom)
+        divNom.appendChild(InputLabelNom)
+        form.appendChild(divNom)
+
+        /* Section Prenom */
+        var divPrenom = document.createElement('div')
+        var labelPrenom = document.createElement('label')
+        labelPrenom.setAttribute('for', "prenom");
+        labelPrenom.innerHTML = 'Prénom : '
+        var InputlabelPrenom = document.createElement('input')
+        InputlabelPrenom.setAttribute('type', "text");
+        InputlabelPrenom.setAttribute('name', "prenom");
+        InputlabelPrenom.setAttribute('placeholder', "Votre Prénom");
+        divPrenom.appendChild(labelPrenom)
+        divPrenom.appendChild(InputlabelPrenom)
+        form.appendChild(divPrenom)
+
+        /* Section Adresse */
+        var divAdresse = document.createElement('div')
+        var labelAdresse = document.createElement('label')
+        labelAdresse.setAttribute('for', "adresse");
+        labelAdresse.innerHTML = 'Adresse : '
+        var InputlabelAdresse = document.createElement('input')
+        InputlabelAdresse.setAttribute('type', "text");
+        InputlabelAdresse.setAttribute('name', "adresse");
+        InputlabelAdresse.setAttribute('placeholder', "Votre Adresse");
+        divAdresse.appendChild(labelAdresse)
+        divAdresse.appendChild(InputlabelAdresse)
+        form.appendChild(divAdresse)
+
+        /* Section Code Postal */
+        var divCodeP = document.createElement('div')
+        var labelCodeP = document.createElement('label')
+        labelCodeP.setAttribute('for', "codeP");
+        labelCodeP.innerHTML = 'Code Postal : '
+        var InputlabelCodeP = document.createElement('input')
+        InputlabelCodeP.setAttribute('type', "text");
+        InputlabelCodeP.setAttribute('name', "codeP");
+        InputlabelCodeP.setAttribute('placeholder', "Code Postal");
+        divCodeP.appendChild(labelCodeP)
+        divCodeP.appendChild(InputlabelCodeP)
+        form.appendChild(divCodeP)
+
+        /* Section Ville */
+        var divVille = document.createElement('div')
+        var labelVille = document.createElement('label')
+        labelVille.setAttribute('for', "ville");
+        labelVille.innerHTML = 'Ville : '
+        var InputlabelVille = document.createElement('input')
+        InputlabelVille.setAttribute('type', "text");
+        InputlabelVille.setAttribute('name', "ville");
+        InputlabelVille.setAttribute('placeholder', "Code Postal");
+        divVille.appendChild(labelVille)
+        divVille.appendChild(InputlabelVille)
+        form.appendChild(divVille)
+
+        /* Section Telephone */
+        var divTelephone = document.createElement('div')
+        var labelTelephone = document.createElement('label')
+        labelTelephone.setAttribute('for', "telephone");
+        labelTelephone.innerHTML = 'Téléphone : '
+        var InputlabelTelephone = document.createElement('input')
+        InputlabelTelephone.setAttribute('type', "text");
+        InputlabelTelephone.setAttribute('name', "telephone");
+        InputlabelTelephone.setAttribute('placeholder', "Votre téléphone");
+        divTelephone.appendChild(labelTelephone)
+        divTelephone.appendChild(InputlabelTelephone)
+        form.appendChild(divTelephone)
+
+        section.appendChild(form)
+        main.appendChild(section)
     }
 }
 
