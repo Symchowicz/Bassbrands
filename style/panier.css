@@ -1,5 +1,5 @@
 article > div > img{
-    margin: 20px 20px ;
+    margin: 10px 3vw ;
     height: 300px;
 }
 
@@ -39,7 +39,7 @@ article > div:last-of-type > div:last-of-type{
     flex-direction: column;
     justify-content: center;
     text-align: right;
-    width: 50vw;
+    width: 45vw;
 }
 
 article > div:last-of-type > div:last-of-type > div:first-of-type{
@@ -70,11 +70,23 @@ article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
     font-size: 20px;
     margin: 0 25px 0 5px;
 }
+
 #moins0, #moins1, #moins2, #moins3, #moins4, #moins5{
     font-size: 20px;
     padding: 0 5px 0 5px;
 }
 
+#ligne {
+    margin: auto auto 20px auto;
+    width: 55vw;
+    border-bottom: solid black;
+}
+
+main > div{
+    font-size: 18px;
+    font-family: roboto;
+    font-weight: bold;
+}
 
 /*---- Responsive Tablette ----*/
 @media(min-width: 768px){
@@ -125,6 +137,9 @@ article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
         padding: 0 5px 0 5px;
         cursor: pointer;
     }
+    main > div{
+        font-size: 22px;
+    }
 }
 
 /*---- Responsive PC ----*/
@@ -171,10 +186,20 @@ article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
         margin: 0 200px 0 5px;
         cursor: pointer;
     }
+
     #moins0, #moins1, #moins2, #moins3, #moins4, #moins5{
         font-size: 24px;
         padding: 0 5px 0 5px;
         cursor: pointer;
+    }
+
+    #ligne {
+        margin: auto auto 20px 9vw;
+        width: 58vw;
+    }
+
+    main > div{
+        font-size: 26px;
     }
 }
 

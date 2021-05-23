@@ -19,6 +19,8 @@ function loadArticle(storedBass){
         p.innerHTML = 'Panier Vide'
         main.appendChild(p)
     }else{
+        var nombreArticle = 0
+        var prixCommande = 0
         for(let i in storedBass){
             if (storedBass[i] != 0){
                 var myArticle = document.createElement('article');
@@ -90,8 +92,21 @@ function loadArticle(storedBass){
                 myArticle.appendChild(div6)
 
                 main.appendChild(myArticle);   
+                nombreArticle = nombreArticle + storedBass[i].qte
+                prixCommande = prixCommande + parseInt(storedBass[i].prix) * storedBass[i].qte
+                console.log(prixCommande)
+
             }
         }
+        var ligne = document.createElement('div')
+        ligne.id = "ligne"
+        var qteTotal = document.createElement('div')
+        qteTotal.innerHTML = "Nombre d'article : " + nombreArticle
+        var prixTotal = document.createElement('div')
+        prixTotal.innerHTML = "Prix Total : " + prixCommande + "€"
+        main.appendChild(ligne);
+        main.appendChild(qteTotal);
+        main.appendChild(prixTotal)
     }
 }
 
