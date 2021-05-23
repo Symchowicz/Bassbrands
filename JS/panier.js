@@ -104,9 +104,13 @@ function loadArticle(storedBass){
         qteTotal.innerHTML = "Nombre d'article : " + nombreArticle
         var prixTotal = document.createElement('div')
         prixTotal.innerHTML = "Prix Total : " + prixCommande + "€"
+        var boutonCommande = document.createElement('div')
+        boutonCommande.innerHTML = "Passer la commande"
+        boutonCommande.id = 'boutonCommande'
         main.appendChild(ligne);
         main.appendChild(qteTotal);
         main.appendChild(prixTotal)
+        main.appendChild(boutonCommande)
     }
 }
 
@@ -117,6 +121,7 @@ function setButton(storedBass){
                 const poubelle0 = document.getElementById('poubelle' + i)
                 const moins0 = document.getElementById('moins' + i)
                 const plus0 = document.getElementById('plus' + i)
+                const boutonCommande = document.getElementById('boutonCommande')
                 if(poubelle0 != null){
                     moins0.addEventListener('click', () => { 
                         storedBass[i].qte--
@@ -135,6 +140,9 @@ function setButton(storedBass){
                     poubelle0.addEventListener('click', () => {  
                         localStorage.removeItem(storedBass[i].reference)
                         window.location.reload()
+                    });
+                    boutonCommande.addEventListener('click', () => {  
+                        console.log('click')
                     });
                 }
                 break;

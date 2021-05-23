@@ -88,6 +88,18 @@ main > div{
     font-weight: bold;
 }
 
+#boutonCommande{
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    padding-top: 15px;
+    background-color: #FDEF9C;
+    border: 1mm ridge #FDEF9C;
+    border-radius:20px;
+    width: 50vw;
+    height: 4vh;
+}
+
 /*---- Responsive Tablette ----*/
 @media(min-width: 768px){
     article > div > img{
@@ -139,6 +151,12 @@ main > div{
     }
     main > div{
         font-size: 22px;
+    }
+
+    #boutonCommande{
+        padding: 10px;
+        width: 26vw;
+        height: 2vh;
     }
 }
 
@@ -201,6 +219,13 @@ main > div{
     main > div{
         font-size: 26px;
     }
+
+    #boutonCommande{
+        margin: auto auto auto 24vw;
+        padding: 10px;
+        width: 23vw;
+        height: 2vh;
+    }
 }
 
 @media(min-width: 1440px){
@@ -245,5 +270,11 @@ main > div{
         font-size: 24px;
         padding: 0 5px 0 5px;
         cursor: pointer;
+    }
+    #boutonCommande{
+        margin: auto auto auto 24vw;
+        padding: 10px;
+        width: 23vw;
+        height: 2vh;
     }
 }
