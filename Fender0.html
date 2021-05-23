@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bassbrands</title>
+    <title>Bassbrands - Fender Bass Artic Pearl</title>
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <link rel="stylesheet" href="style/nav_bar.css">
     <link rel="stylesheet" href="style/footer.css">
@@ -12,33 +12,34 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html" title="page d'accueil"> <img id="logo" src="./pics/Logo Bassbrands.svg" alt="Logo Bassbrands"></a>
+    <div class="logo">
+        <a href="index.html" title="page d'accueil"> <img id="logo" src="./pics/Logo Bassbrands.svg" alt="Logo Bassbrands"></a>
+    </div>
+    <nav class="menu">
+        <ul class="menu-list">
+            <li>Rechercher</li>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="dropdown">
+                <button class="dropdownBtn">Nos Marques</button>
+                <div class="dropdown-content">
+                    <a href="Fender.html">Fender</a>
+                    <a href="Cort.html">Cort</a>
+                </div>
+            </li>
+            <li><a href="panier.html">Panier<img class="iconPanier" src="./pics/panier.svg" alt="panier"></a></li>
+        </ul>
+    </nav>
+    <div class="burger">
+        <span></span>
+        <div>
+            <a href="">Rechercher</a>
+            <a href="index.html">Accueil</a>
+            <a href="">Nos Marques</a>
+            <a href="panier.html">Panier<img class="iconPanier" src="./pics/panier.svg" alt="panier"></a>
         </div>
-        <nav class="menu">
-            <ul class="menu-list">
-                <li>Rechercher</li>
-                <li><a href="index.html">Accueil</a></li>
-                <li class="dropdown">
-                    <button class="dropdownBtn">Nos Marques</button>
-                    <div class="dropdown-content">
-                        <a href="Fender.html">Fender</a>
-                        <a href="Cort.html">Cort</a>
-                    </div>
-                </li>
-                <li><a href="panier.html">Panier<img class="iconPanier" src="./pics/panier.svg" alt="panier"></a></li>
-            </ul>
-        </nav>
-        <div class="burger">
-            <span></span>
-            <div>
-                <a href="">Rechercher</a>
-                <a href="index.html">Accueil</a>
-                <a href="">Nos Marques</a>
-                <a href="">Panier<img class="iconPanier" src="./pics/panier.svg" alt="panier"></a>
-            </div>
-        </div>
-    </header>
+    </div>
+</header>
+
     <main>
         <div id ='chemin'>
             <ul>
@@ -79,10 +80,10 @@
         </div>
         <div class="menuFooter">
             <ul>
-                <li><a href="">Sources</a></li>
-                <li><a href="">Qui sommes-nous</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>  
+                <li><a href="sources.html">Sources</a></li>
+                <li><a href="aboutUs.html">Qui sommes-nous</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </footer>
 </body>

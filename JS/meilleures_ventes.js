@@ -59,7 +59,6 @@ function Article(jsonObj){
 
     listeMax = [max1,max2,max3]
     for(var i =0; i < 3; i++){
-
         var myArticle = document.createElement('article');
         myArticle.classList.add('article'+(i+1)) ;
         var img = document.createElement('img');
