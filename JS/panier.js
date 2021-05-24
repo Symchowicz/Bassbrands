@@ -94,7 +94,6 @@ function loadArticle(storedBass){
                 main.appendChild(myArticle);   
                 nombreArticle = nombreArticle + storedBass[i].qte
                 prixCommande = prixCommande + parseInt(storedBass[i].prix) * storedBass[i].qte
-                console.log(prixCommande)
 
             }
         }
@@ -111,13 +110,23 @@ function loadArticle(storedBass){
         main.appendChild(prixTotal)
         main.appendChild(boutonCommande)
 
-        /* Le formulaire : */
+    /* Le formulaire : */
         var section = document.createElement('section')
+        section.id = 'formulaireOff'
+        var SectionNomPrenom = document.createElement('section')
+        SectionNomPrenom.id = 'SectionNomPrenom'
+        var SectionAdresseCp = document.createElement('section')
+        SectionAdresseCp.id = 'AdresseCp'
+        var SectionVilleTel = document.createElement('section')
+        SectionVilleTel.id = 'VilleTel'
         var form = document.createElement('form')
         form.setAttribute('methode', "POST");
         form.setAttribute('action', "don'tknow_j'improMDR.html");
-        form.id = 'Formulaire'
-        
+
+        /* Coordonnée */
+        var coordonnée = document.createElement('div')
+        coordonnée.innerHTML = 'Vos coordonnées'
+        form.appendChild(coordonnée)
 
         /* Section Nom */
         var divNom = document.createElement('div')
@@ -130,7 +139,7 @@ function loadArticle(storedBass){
         InputLabelNom.setAttribute('placeholder', "Votre nom");
         divNom.appendChild(labelNom)
         divNom.appendChild(InputLabelNom)
-        form.appendChild(divNom)
+        SectionNomPrenom.appendChild(divNom)
 
         /* Section Prenom */
         var divPrenom = document.createElement('div')
@@ -143,7 +152,8 @@ function loadArticle(storedBass){
         InputlabelPrenom.setAttribute('placeholder', "Votre Prénom");
         divPrenom.appendChild(labelPrenom)
         divPrenom.appendChild(InputlabelPrenom)
-        form.appendChild(divPrenom)
+        SectionNomPrenom.appendChild(divPrenom)
+        form.appendChild(SectionNomPrenom)
 
         /* Section Adresse */
         var divAdresse = document.createElement('div')
@@ -156,7 +166,7 @@ function loadArticle(storedBass){
         InputlabelAdresse.setAttribute('placeholder', "Votre Adresse");
         divAdresse.appendChild(labelAdresse)
         divAdresse.appendChild(InputlabelAdresse)
-        form.appendChild(divAdresse)
+        SectionAdresseCp.appendChild(divAdresse)
 
         /* Section Code Postal */
         var divCodeP = document.createElement('div')
@@ -169,7 +179,8 @@ function loadArticle(storedBass){
         InputlabelCodeP.setAttribute('placeholder', "Code Postal");
         divCodeP.appendChild(labelCodeP)
         divCodeP.appendChild(InputlabelCodeP)
-        form.appendChild(divCodeP)
+        SectionAdresseCp.appendChild(divCodeP)
+        form.appendChild(SectionAdresseCp)
 
         /* Section Ville */
         var divVille = document.createElement('div')
@@ -182,7 +193,7 @@ function loadArticle(storedBass){
         InputlabelVille.setAttribute('placeholder', "Code Postal");
         divVille.appendChild(labelVille)
         divVille.appendChild(InputlabelVille)
-        form.appendChild(divVille)
+        SectionVilleTel.appendChild(divVille)
 
         /* Section Telephone */
         var divTelephone = document.createElement('div')
@@ -195,7 +206,61 @@ function loadArticle(storedBass){
         InputlabelTelephone.setAttribute('placeholder', "Votre téléphone");
         divTelephone.appendChild(labelTelephone)
         divTelephone.appendChild(InputlabelTelephone)
-        form.appendChild(divTelephone)
+        SectionVilleTel.appendChild(divTelephone)
+        form.appendChild(SectionVilleTel)
+
+        /* Section Choix Livraison */
+        var selectLivraison = document.createElement('select')
+        var option1 = document.createElement('option')
+        option1.setAttribute('id', 'option1')
+        option1.setAttribute('value', 5);
+        option1.innerHTML = 'Livraison Standard : 5€'
+        var option2 = document.createElement('option')
+        option2.setAttribute('id', 'option2')
+        option2.setAttribute('value', 15);
+        option2.innerHTML = 'Livraison Express : 15€'
+        selectLivraison.appendChild(option1)
+        selectLivraison.appendChild(option2)
+        form.appendChild(selectLivraison)
+
+        /* Section Recapitulatif */
+        var sectionRecapitulatif = document.createElement('section')
+        var recapitulatif = document.createElement('div')
+        recapitulatif.innerHTML = 'Récapitulatif :'
+
+        var prixAvantLivraison = document.createElement('div')
+        prixAvantLivraison.setAttribute('data-value', prixCommande)
+        prixAvantLivraison.setAttribute('id', 'prixAvantLivraison')
+        prixAvantLivraison.innerHTML = 'Commande : ' + prixCommande + '€'
+
+        var prixLivraison = document.createElement('div')
+        prixLivraison.setAttribute('id', 'prixLivraison')
+        prixLivraison.innerHTML = 'Livraison : ' + selectLivraison.options[selectLivraison.selectedIndex].value + '€'
+
+        var PrixAvecLivraison = document.createElement('div')
+        PrixAvecLivraison.setAttribute('id', 'prixAvecLivraison')
+        console.log(prixCommande)
+        console.log(parseInt(selectLivraison.options[selectLivraison.selectedIndex].value))
+        PrixAvecLivraison.innerHTML = 'Prix Total : ' + (parseInt(prixCommande) + parseInt(selectLivraison.options[selectLivraison.selectedIndex].value)) + '€'
+
+        sectionRecapitulatif.appendChild(recapitulatif)
+        sectionRecapitulatif.appendChild(prixAvantLivraison)
+        sectionRecapitulatif.appendChild(prixLivraison)
+        sectionRecapitulatif.appendChild(PrixAvecLivraison)
+        form.appendChild(sectionRecapitulatif)
+        
+        /* Section Bouton */
+        var sectionBouton = document.createElement('section')
+        sectionBouton.setAttribute('id', "SectionBouton");
+        var boutonRetour = document.createElement('div')
+        boutonRetour.innerHTML = 'retour'
+        boutonRetour.setAttribute('id', "retour");
+        var boutonPaiement = document.createElement('div')
+        boutonPaiement.innerHTML = 'Paiement'
+        boutonPaiement.setAttribute('id', "paiement");
+        sectionBouton.appendChild(boutonRetour)
+        sectionBouton.appendChild(boutonPaiement)
+        form.appendChild(sectionBouton)
 
         section.appendChild(form)
         main.appendChild(section)
@@ -210,6 +275,13 @@ function setButton(storedBass){
                 const moins0 = document.getElementById('moins' + i)
                 const plus0 = document.getElementById('plus' + i)
                 const boutonCommande = document.getElementById('boutonCommande')
+                const formulaire = document.getElementById('formulaireOff')
+                const retour = document.getElementById('retour')
+                const paiement = document.getElementById('paiement')
+                const selectLivraison = document.querySelector('select')
+                const prixLivraison = document.getElementById('prixLivraison')
+                const prixAvantLivraison = document.getElementById('prixAvantLivraison').getAttribute('data-value')
+                const prixAvecLivraison = document.getElementById('prixAvecLivraison')
                 if(poubelle0 != null){
                     moins0.addEventListener('click', () => { 
                         storedBass[i].qte--
@@ -230,8 +302,22 @@ function setButton(storedBass){
                         window.location.reload()
                     });
                     boutonCommande.addEventListener('click', () => {  
-                        console.log('click')
+                        formulaire.id = 'formulaireOn'   
+                        formulaire.style.display = 'block'     
                     });
+                    retour.addEventListener('click', () => {  
+                        formulaire.id = 'formulaireoff'
+                        formulaire.style.display = 'none'
+                    });
+                    paiement.addEventListener('click', () => {  
+                        console.log('click')             
+                    });
+                    selectLivraison.addEventListener('click', () => {
+                        console.log(prixAvantLivraison)
+                        console.log(parseInt(selectLivraison.options[selectLivraison.selectedIndex].value))
+                        prixAvecLivraison.innerHTML = 'Prix Total : ' + (parseInt(prixAvantLivraison) + parseInt(selectLivraison.options[selectLivraison.selectedIndex].value)) + '€'
+                        prixLivraison.innerHTML = 'Livraison : ' + selectLivraison.options[selectLivraison.selectedIndex].value + '€'
+                    })
                 }
                 break;
             case 1:

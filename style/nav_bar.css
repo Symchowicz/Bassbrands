@@ -4,6 +4,7 @@
 }
 
 body{
+    position: relative;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -21,7 +22,6 @@ header{
 }
 
 main{
-    position: relative;
     margin: 30px 20px 0 20px;
 }
 

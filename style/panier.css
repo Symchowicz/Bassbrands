@@ -100,6 +100,91 @@ main > div{
     height: 4vh;
 }
 
+#formulaireOff {
+    display: none;
+}
+
+#formulaireOn{
+    position:fixed;
+    z-index: 5;
+    height: 100vh;
+    width: 100vw;
+    top : 0%;
+    left: 0;
+    background-color:  rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+}
+
+#formulaireOn form{
+    position: absolute;
+    z-index: 10;
+    bottom: 40vh;
+    right:50%;
+    transform: translateX(50%);
+    background-color: aliceblue;
+    border: solid black;
+}
+
+#formulaireOn > form > section > div{
+    display:flex;
+    flex-direction: column;
+    margin: 5px 10px;
+}
+#formulaireOn section input{
+    width: 38vw;
+    margin: 1vw;
+}
+
+#SectionNomPrenom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#AdresseCp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#VilleTel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#SectionBouton{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80vw;
+    justify-content: space-between;
+}
+
+#retour{
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    padding-top: 15px;
+    background-color: #FDEF9C;
+    border: 1mm ridge #FDEF9C;
+    border-radius:20px;
+    width: 30vw;
+    height: 4vh;
+}
+
+#paiement{
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    padding-top: 15px;
+    background-color: #FDEF9C;
+    border: 1mm ridge #FDEF9C;
+    border-radius:20px;
+    width: 30vw;
+    height: 4vh;
+}
+
 /*---- Responsive Tablette ----*/
 @media(min-width: 768px){
     article > div > img{
