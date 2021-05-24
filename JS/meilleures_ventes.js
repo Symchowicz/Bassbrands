@@ -1,4 +1,4 @@
-var bestseller = document.querySelector('.bestseller');
+var bestseller = document.querySelector('.produit');
 
 let requestUrl = 'https://raw.githubusercontent.com/Symchowicz/Bassbrands/main/JS/bassData.json';
 let request = new XMLHttpRequest();
@@ -10,22 +10,6 @@ request.send();
 request.onload = function (){
     var data = request.response;
     Article(data)
-    const article1 = document.querySelector('.article1')
-    console.log(article1)
-    article1.addEventListener('click', () => {
-        /* window.location.replace('index.html') ; */
-        console.log('click')
-    });
-
-    const article2 = document.querySelector('.article2')
-    article2.addEventListener('click', () => {
-        /* window.location.replace('index.html'); */
-    });
-
-    const article3 = document.querySelector('.article3')
-    article3.addEventListener('click', () => {
-        /* window.location.replace('index.html'); */
-    });
 }
 
 function getMaxTableau(tableauNumérique) {
@@ -34,7 +18,6 @@ function getMaxTableau(tableauNumérique) {
 
 function Article(jsonObj){
     var listeNbVente = []
-    
     for(let i=0; i <= 5; i++){
         listeNbVente.push(jsonObj[i]['nbVente'])
     }
@@ -42,7 +25,6 @@ function Article(jsonObj){
     var max1 = 0
     var max2 = 0
     var max3 = 0
-    
     max1 = getMaxTableau(listeNbVente)      
     listeNbVente = listeNbVente.filter(item => item !== max1)
 
@@ -58,14 +40,57 @@ function Article(jsonObj){
     }
 
     listeMax = [max1,max2,max3]
-    for(var i =0; i < 3; i++){
+    for(var i =0; i < jsonObj.length; i++){
         var myArticle = document.createElement('article');
-        myArticle.classList.add('article'+(i+1)) ;
-        var img = document.createElement('img');
+        var myLink = document.createElement('a');
+        var myImage = document.createElement('div');
+        var libelle = document.createElement('h2');
+        var infos = document.createElement('div');
+        var infoPrix = document.createElement('div');
+        var prix = document.createElement('p');
+        var prixInitial = document.createElement('p');
+        var infoDispo = document.createElement('div');
+        var stock = document.createElement('p');
+        var ref = document.createElement('p');
+
+        //Attribution de class
+        myImage.classList.add('myImage');
+        libelle.classList.add('nom');
+        infos.classList.add('infos');
+        infoPrix.classList.add('infoPrix')
+        prix.classList.add('prix');
+        prixInitial.classList.add('prixInitial');
+        infoDispo.classList.add('infoDispo');
+        stock.classList.add('stock');
+        ref.classList.add('reference');
+
         index = listeNbVente.indexOf(listeMax[i])
-        img.setAttribute('src', jsonObj[index].image);
-        myArticle.appendChild(img);
-        bestseller.appendChild(myArticle);     
+        // contenu des balises
+        myLink.setAttribute('href', jsonObj[index].marque+i+".html");
+        console.log(myLink);
+        myImage.style.backgroundImage = "url('"+ jsonObj[index].image + "')";
+        libelle.textContent = jsonObj[index].nom;
+        prix.textContent = jsonObj[index].prix + '€';
+        prixInitial.textContent = 'au lieu de '+ jsonObj[index]['prix initial'] + '€';
+        if (jsonObj[index].disponible){
+            stock.textContent = 'En stock';
+        }else{
+            stock.textContent = "Rupture de stock";
+        }
+        ref.textContent = "Réf : " + jsonObj[index].reference;
+
+        myLink.appendChild(myImage)
+        myLink.appendChild(myImage);
+        myLink.appendChild(libelle);
+        infoPrix.appendChild(prix);
+        infoPrix.appendChild(prixInitial);
+        infoDispo.appendChild(stock);
+        infoDispo.appendChild(ref);
+        infos.appendChild(infoPrix);
+        infos.appendChild(infoDispo);
+        myLink.appendChild(infos);
+        myArticle.appendChild(myLink);
+        bestseller.appendChild(myArticle);
     }
 }
 
