@@ -16,7 +16,6 @@ export function article(reference){
             let azs = localStorage.getItem(bassArticle.reference)
             if(azs){
                 let obj = JSON.parse(azs);
-                console.log(obj.qte)
                 obj.qte++;
                 localStorage.removeItem(bassArticle.reference);
                 localStorage.setItem(bassArticle.reference, JSON.stringify(obj));
