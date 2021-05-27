@@ -103,13 +103,19 @@ function loadArticle(storedBass){
         var qteTotal = document.createElement('div')
         var prixTotal = document.createElement('div')
         prixTotal.innerHTML = "Prix Total : " + prixCommande + "€"
+        var sectionBoutonPanier = document.createElement('section')
+        var boutonreinitialiser = document.createElement('div')
+        boutonreinitialiser.innerHTML = "Reinitialiser le panier"
+        boutonreinitialiser.id = 'reinitialiser'
         var boutonCommande = document.createElement('div')
         boutonCommande.innerHTML = "Passer la commande"
         boutonCommande.id = 'boutonCommande'
+        sectionBoutonPanier.appendChild(boutonreinitialiser)
+        sectionBoutonPanier.appendChild(boutonCommande)
         main.appendChild(ligne);
         main.appendChild(qteTotal);
         main.appendChild(prixTotal)
-        main.appendChild(boutonCommande)
+        main.appendChild(sectionBoutonPanier)
 
     /* Le formulaire : */
         var section = document.createElement('section')
@@ -126,7 +132,7 @@ function loadArticle(storedBass){
 
         /* Coordonnée */
         var coordonnée = document.createElement('div')
-        coordonnée.innerHTML = 'Vos coordonnées'
+        coordonnée.innerHTML = 'Livraison :'
         form.appendChild(coordonnée)
 
         /* Section Nom */
@@ -296,6 +302,7 @@ function setButton(storedBass){
                     const codeP = document.getElementById('codeP')
                     const ville = document.getElementById('ville')
                     const telephone = document.getElementById('telephone')
+                    const reinitialiser = document.getElementById('reinitialiser')
                     moins0.addEventListener('click', () => { 
                         storedBass[i].qte--
                         if(storedBass[i].qte == 0){
@@ -313,6 +320,10 @@ function setButton(storedBass){
                     });
                     poubelle0.addEventListener('click', () => {  
                         localStorage.removeItem(storedBass[i].reference)
+                        window.location.reload()
+                    });
+                    reinitialiser.addEventListener('click', () => {
+                        localStorage.clear()
                         window.location.reload()
                     });
                     boutonCommande.addEventListener('click', () => {  

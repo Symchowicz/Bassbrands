@@ -88,7 +88,15 @@ main > div{
     font-weight: bold;
 }
 
-#boutonCommande{
+main > section:first-of-type{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#reinitialiser,#boutonCommande{
+    font-family: roboto;
     cursor: pointer;
     text-align: center;
     margin: auto;
@@ -97,7 +105,10 @@ main > div{
     border: 1mm ridge #FDEF9C;
     border-radius:20px;
     width: 50vw;
-    height: 4vh;
+    height: 35px;
+}
+#reinitialiser{
+    margin-right: 10vw;
 }
 
 #formulaireOff {
@@ -118,11 +129,17 @@ main > div{
 #formulaireOn form{
     position: absolute;
     z-index: 10;
-    bottom: 40vh;
+    top: 10%;
     right:50%;
     transform: translateX(50%);
     background-color: aliceblue;
     border: solid black;
+}
+
+#formulaireOn > form > div{
+    font-family: roboto;
+    margin: 5px;
+    font-size: 20px;
 }
 
 #formulaireOn > form > section > div{
@@ -130,7 +147,7 @@ main > div{
     flex-direction: column;
     margin: 5px 10px;
 }
-#formulaireOn section input{
+input{
     width: 38vw;
     margin: 1vw;
 }
@@ -151,6 +168,25 @@ main > div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#select{
+    margin: 0 0 15px 25vw;
+    width: 38vw;
+    font-size: 15px;
+}
+
+form > section:nth-of-type(4) > div{
+    font-family: roboto;
+}
+
+form > section:nth-of-type(4) > div:first-child{
+    font-size: 20px;
+}
+#prixAvantLivraison, #prixLivraison, #prixAvecLivraison{
+    padding-left: 10px ;
+    font-size: 18px;
 }
 
 #SectionBouton{
@@ -161,7 +197,9 @@ main > div{
     justify-content: space-between;
 }
 
-#retour{
+#retour, #paiement {
+    font-family: roboto;
+    font-size: 20px;
     cursor: pointer;
     text-align: center;
     margin: auto;
@@ -173,17 +211,6 @@ main > div{
     height: 4vh;
 }
 
-#paiement{
-    cursor: pointer;
-    text-align: center;
-    margin: auto;
-    padding-top: 15px;
-    background-color: #FDEF9C;
-    border: 1mm ridge #FDEF9C;
-    border-radius:20px;
-    width: 30vw;
-    height: 4vh;
-}
 
 /*---- Responsive Tablette ----*/
 @media(min-width: 768px){
@@ -238,10 +265,36 @@ main > div{
         font-size: 22px;
     }
 
-    #boutonCommande{
+    #reinitialiser,#boutonCommande{
         padding: 10px;
         width: 26vw;
         height: 2vh;
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 20px;
+        padding-left: 8px;
+    }
+
+    #select{
+    margin: 0 0 15px 25vw;
+    width: 38vw;
+    font-size: 18px;
+    }
+
+    #formulaireOn > form > div{
+        margin: 20px;
+        font-size: 25px;
+    }
+
+    form > section:nth-of-type(4) > div:first-child{
+        padding-left: 10px;
+        font-size: 25px;
+    }
+    #prixAvantLivraison, #prixLivraison, #prixAvecLivraison{
+        font-size: 22px;
+        padding: 5px 0 5px 30px;
     }
 }
 
@@ -305,11 +358,44 @@ main > div{
         font-size: 26px;
     }
 
-    #boutonCommande{
-        margin: auto auto auto 24vw;
+    #reinitialiser,#boutonCommande{
         padding: 10px;
         width: 23vw;
         height: 2vh;
+        font-size: 25px;
+    }
+
+    main > section:first-of-type{
+        width: 75vw;
+    }
+
+    label {
+        font-size: 25px;
+        padding-left: 8px;
+    }
+    
+    #select{
+        margin: 0 0 15px 27vw;
+        width: 300px;
+        font-size:20px;
+    }
+
+    input{
+        height: 20px;
+    }
+
+    #formulaireOn > form > div{
+        margin: 20px;
+        font-size: 30px;
+    }
+
+    form > section:nth-of-type(4) > div:first-child{
+        padding-left: 10px;
+        font-size: 30px;
+    }
+    #prixAvantLivraison, #prixLivraison, #prixAvecLivraison{
+        font-size: 25px;
+        padding: 5px 0 5px 30px;
     }
 }
 
@@ -356,10 +442,45 @@ main > div{
         padding: 0 5px 0 5px;
         cursor: pointer;
     }
-    #boutonCommande{
-        margin: auto auto auto 24vw;
+
+    #reinitialiser,#boutonCommande{
         padding: 10px;
         width: 23vw;
         height: 2vh;
+        font-size: 25px;
+    }
+
+    main > section:first-of-type{
+        width: 75vw;
+    }
+
+
+    label {
+        font-size: 25px;
+        padding-left: 8px;
+    }
+    
+    #select{
+        margin: 0 0 15px 30vw;
+        width: 350px;
+        font-size:25px;
+    }
+
+    input{
+        height: 25px;
+    }
+
+    #formulaireOn > form > div{
+        margin: 20px;
+        font-size: 35px;
+    }
+
+    form > section:nth-of-type(4) > div:first-child{
+        padding-left: 10px;
+        font-size: 35px;
+    }
+    #prixAvantLivraison, #prixLivraison, #prixAvecLivraison{
+        font-size: 30px;
+        padding: 5px 0 5px 30px;
     }
 }
