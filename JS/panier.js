@@ -8,7 +8,7 @@ function storeBass(){
     for(let i in localStorage){
         if(localStorage.hasOwnProperty(i)){
             storedBass.push(JSON.parse(localStorage.getItem(i))) 
-        }   
+        }
     }
 }
 
@@ -45,6 +45,7 @@ function loadArticle(storedBass){
                 moins.innerHTML = '-'
                 
                 var quantite = document.createElement('span')
+                quantite.id = "quantite" + i
                 quantite.innerHTML = storedBass[i].qte
 
                 var plus = document.createElement('span')
@@ -137,6 +138,7 @@ function loadArticle(storedBass){
         InputLabelNom.setAttribute('type', "text");
         InputLabelNom.setAttribute('name', "nom");
         InputLabelNom.setAttribute('placeholder', "Votre nom");
+        InputLabelNom.setAttribute('id', "nom")
         divNom.appendChild(labelNom)
         divNom.appendChild(InputLabelNom)
         SectionNomPrenom.appendChild(divNom)
@@ -150,6 +152,7 @@ function loadArticle(storedBass){
         InputlabelPrenom.setAttribute('type', "text");
         InputlabelPrenom.setAttribute('name', "prenom");
         InputlabelPrenom.setAttribute('placeholder', "Votre Prénom");
+        InputlabelPrenom.setAttribute('id', "prenom")
         divPrenom.appendChild(labelPrenom)
         divPrenom.appendChild(InputlabelPrenom)
         SectionNomPrenom.appendChild(divPrenom)
@@ -164,6 +167,7 @@ function loadArticle(storedBass){
         InputlabelAdresse.setAttribute('type', "text");
         InputlabelAdresse.setAttribute('name', "adresse");
         InputlabelAdresse.setAttribute('placeholder', "Votre Adresse");
+        InputlabelAdresse.setAttribute('id', "adresse");
         divAdresse.appendChild(labelAdresse)
         divAdresse.appendChild(InputlabelAdresse)
         SectionAdresseCp.appendChild(divAdresse)
@@ -177,6 +181,7 @@ function loadArticle(storedBass){
         InputlabelCodeP.setAttribute('type', "text");
         InputlabelCodeP.setAttribute('name', "codeP");
         InputlabelCodeP.setAttribute('placeholder', "Code Postal");
+        InputlabelCodeP.setAttribute('id', "codeP");
         divCodeP.appendChild(labelCodeP)
         divCodeP.appendChild(InputlabelCodeP)
         SectionAdresseCp.appendChild(divCodeP)
@@ -190,7 +195,8 @@ function loadArticle(storedBass){
         var InputlabelVille = document.createElement('input')
         InputlabelVille.setAttribute('type', "text");
         InputlabelVille.setAttribute('name', "ville");
-        InputlabelVille.setAttribute('placeholder', "Code Postal");
+        InputlabelVille.setAttribute('placeholder', "Paris,Lyon...");
+        InputlabelVille.setAttribute('id', "ville");
         divVille.appendChild(labelVille)
         divVille.appendChild(InputlabelVille)
         SectionVilleTel.appendChild(divVille)
@@ -204,6 +210,7 @@ function loadArticle(storedBass){
         InputlabelTelephone.setAttribute('type', "text");
         InputlabelTelephone.setAttribute('name', "telephone");
         InputlabelTelephone.setAttribute('placeholder', "Votre téléphone");
+        InputlabelTelephone.setAttribute('id', "telephone");
         divTelephone.appendChild(labelTelephone)
         divTelephone.appendChild(InputlabelTelephone)
         SectionVilleTel.appendChild(divTelephone)
@@ -211,12 +218,11 @@ function loadArticle(storedBass){
 
         /* Section Choix Livraison */
         var selectLivraison = document.createElement('select')
+        selectLivraison.setAttribute('id', 'select')
         var option1 = document.createElement('option')
-        option1.setAttribute('id', 'option1')
         option1.setAttribute('value', 5);
         option1.innerHTML = 'Livraison Standard : 5€'
         var option2 = document.createElement('option')
-        option2.setAttribute('id', 'option2')
         option2.setAttribute('value', 15);
         option2.innerHTML = 'Livraison Express : 15€'
         selectLivraison.appendChild(option1)
@@ -274,28 +280,36 @@ function setButton(storedBass){
                 const poubelle0 = document.getElementById('poubelle' + i)
                 const moins0 = document.getElementById('moins' + i)
                 const plus0 = document.getElementById('plus' + i)
-                const boutonCommande = document.getElementById('boutonCommande')
-                const formulaire = document.getElementById('formulaireOff')
-                const retour = document.getElementById('retour')
-                const paiement = document.getElementById('paiement')
-                const selectLivraison = document.querySelector('select')
-                const prixLivraison = document.getElementById('prixLivraison')
-                const prixAvantLivraison = document.getElementById('prixAvantLivraison').getAttribute('data-value')
-                const prixAvecLivraison = document.getElementById('prixAvecLivraison')
+                const quantite0 = document.getElementById('quantite0')
                 if(poubelle0 != null){
+                    const boutonCommande = document.getElementById('boutonCommande')
+                    const formulaire = document.getElementById('formulaireOff')
+                    const retour = document.getElementById('retour')
+                    const paiement = document.getElementById('paiement')
+                    const selectLivraison = document.querySelector('select')
+                    const prixLivraison = document.getElementById('prixLivraison')
+                    const prixAvantLivraison = document.getElementById('prixAvantLivraison').getAttribute('data-value')
+                    const prixAvecLivraison = document.getElementById('prixAvecLivraison')
+                    const nom = document.getElementById('nom')
+                    const prenom = document.getElementById('prenom')
+                    const adresse = document.getElementById('adresse')
+                    const codeP = document.getElementById('codeP')
+                    const ville = document.getElementById('ville')
+                    const telephone = document.getElementById('telephone')
                     moins0.addEventListener('click', () => { 
                         storedBass[i].qte--
                         if(storedBass[i].qte == 0){
                             localStorage.removeItem(storedBass[i].reference)
+                            window.location.reload()
                         }else{
                             localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                            quantite0.innerHTML = storedBass[i].qte
                         }
-                        window.location.reload()
                     });
                     plus0.addEventListener('click', () => {  
                         storedBass[i].qte++
                         localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        window.location.reload()
+                        quantite0.innerHTML = storedBass[i].qte
                     });
                     poubelle0.addEventListener('click', () => {  
                         localStorage.removeItem(storedBass[i].reference)
@@ -310,147 +324,57 @@ function setButton(storedBass){
                         formulaire.style.display = 'none'
                     });
                     paiement.addEventListener('click', () => {  
-                        console.log('click')             
+                        console.log('click')
+                        var form = [{
+                            'nom': nom.value, 
+                            'prenom': prenom.value,
+                            'adresse': adresse.value, 
+                            'codeP': codeP.value, 
+                            'ville': ville.value, 
+                            'telephone': telephone.value, 
+                            'livraison': parseInt(selectLivraison.options[selectLivraison.selectedIndex].value)
+                        }]
+
+                        localStorage.setItem('Commande', JSON.stringify(form))
+                        var resultat = JSON.stringify(localStorage)
+                        resultat = JSON.parse(resultat)
+                        /* on a converti le localstorage en JSON , on retrouve donc dans le localstorage les infos de livraison et le contenu du panier */
+                        document.location.href='erreur_404.html'
                     });
                     selectLivraison.addEventListener('click', () => {
-                        console.log(prixAvantLivraison)
-                        console.log(parseInt(selectLivraison.options[selectLivraison.selectedIndex].value))
                         prixAvecLivraison.innerHTML = 'Prix Total : ' + (parseInt(prixAvantLivraison) + parseInt(selectLivraison.options[selectLivraison.selectedIndex].value)) + '€'
                         prixLivraison.innerHTML = 'Livraison : ' + selectLivraison.options[selectLivraison.selectedIndex].value + '€'
                     })
                 }
                 break;
-            case 1:
-                const poubelle1 = document.getElementById('poubelle' + i)
-                const moins1 = document.getElementById('moins' + i)
-                const plus1 = document.getElementById('plus' + i)
-                if(poubelle1 != null){
-                    moins1.addEventListener('click', () => {
-                        storedBass[i].qte--
-                        if(storedBass[i].qte == 0){
-                            localStorage.removeItem(storedBass[i].reference)
-                        }else{
-                            localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        }
-                        window.location.reload()
-                    });
-                    plus1.addEventListener('click', () => {
-                        storedBass[i].qte++
-                        localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        window.location.reload()
-                    });
-                    poubelle1.addEventListener('click', () => {  
-                        localStorage.removeItem(storedBass[i].reference)
-                        window.location.reload()
-                    });
-                }
-                break;
-            case 2:   
-                const poubelle2 = document.getElementById('poubelle' + i)
-                const moins2 = document.getElementById('moins' + i)
-                const plus2 = document.getElementById('plus' + i)
-                if(poubelle2 != null){
-                    moins2.addEventListener('click', () => {  
-                        storedBass[i].qte--
-                        if(storedBass[i].qte == 0){
-                            localStorage.removeItem(storedBass[i].reference)
-                        }else{
-                            localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        }
-                        window.location.reload()
-                    });
-                    plus2.addEventListener('click', () => { 
-                        storedBass[i].qte++ 
-                        localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        window.location.reload()
-                    });
-                    poubelle2.addEventListener('click', () => {   
-                        localStorage.removeItem(storedBass[i].reference)
-                        window.location.reload() 
-                    });
-                }
-                break;
-            case 3:
-                const poubelle3 = document.getElementById('poubelle' + i)
-                const moins3 = document.getElementById('moins' + i)
-                const plus3 = document.getElementById('plus' + i)
-                if(poubelle3 != null){
-                    moins3.addEventListener('click', () => {  
-                        storedBass[i].qte--
-                        if(storedBass[i].qte == 0){
-                            localStorage.removeItem(storedBass[i].reference)
-                        }else{
-                            localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        }
-                        window.location.reload()
-                    });
-                    plus3.addEventListener('click', () => {  
-                        storedBass[i].qte++
-                        localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        window.location.reload()
-                    });
-                    if(poubelle3 != null){    
-                        poubelle3.addEventListener('click', () => {
-                            localStorage.removeItem(storedBass[i].reference)
-                            window.location.reload()
-                        });
-                    }
-                }
-                break;
-            case 4:
-                const poubelle4 = document.getElementById('poubelle' + i)
-                const moins4 = document.getElementById('moins' + i)
-                const plus4 = document.getElementById('plus' + i)
-                if(poubelle4 != null){
-                    moins4.addEventListener('click', () => {
-                        storedBass[i].qte--  
-                        if(storedBass[i].qte == 0){
-                            localStorage.removeItem(storedBass[i].reference)
-                        }else{
-                            localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        }
-                        window.location.reload()
-                    });
-                    plus4.addEventListener('click', () => {  
-                        storedBass[i].qte++
-                        localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        window.location.reload()
-                    });
-                    if(poubelle4 != null){
-                        poubelle4.addEventListener('click', () => {  
-                            localStorage.removeItem(storedBass[i].reference)
-                            window.location.reload()
-                        });
-                    }
-                }
-                break; 
-            case 5: 
-                const poubelle5 = document.getElementById('poubelle' + i)
-                const moins5 = document.getElementById('moins' + i)
-                const plus5 = document.getElementById('plus' + i)
-                if(poubelle5 != null){
-                    moins5.addEventListener('click', () => {  
-                        storedBass[i].qte--
-                        if(storedBass[i].qte == 0){
-                            localStorage.removeItem(storedBass[i].reference)
-                        }else{
-                            localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        }
-                        window.location.reload()
-                    });
-                    plus5.addEventListener('click', () => {  
-                        storedBass[i].qte++
-                        localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        window.location.reload()
-                    });
-                    poubelle5.addEventListener('click', () => { 
-                        localStorage.removeItem(storedBass[i].reference)
-                        window.location.reload()
-                    });
-                }
-                break;
             default:
-                console.log("Réf indispo")           
-        }          
+                var poubelle = document.getElementById('poubelle' + i)
+                var moins = document.getElementById('moins' + i)
+                var plus = document.getElementById('plus' + i)
+                var quantite = [document.getElementById('quantite1'),document.getElementById('quantite2'),document.getElementById('quantite3'),document.getElementById('quantite4'),document.getElementById('quantite5')]
+                if(poubelle != null){
+                    console.log(quantite)
+                    moins.addEventListener('click', () => {
+                        storedBass[i].qte--
+                        if(storedBass[i].qte == 0){
+                            localStorage.removeItem(storedBass[i].reference)
+                            window.location.reload()
+                        }else{
+                            localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                            quantite[i-1].innerHTML = storedBass[i].qte
+                        }
+                    });
+                    plus.addEventListener('click', () => {
+                        storedBass[i].qte++
+                        localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
+                        quantite[i-1].innerHTML = storedBass[i].qte
+                    });
+                    poubelle.addEventListener('click', () => {  
+                        localStorage.removeItem(storedBass[i].reference)
+                        window.location.reload()
+                    });
+                }
+                break;      
+        }  
     }
 }

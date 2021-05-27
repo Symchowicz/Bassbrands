@@ -1,12 +1,19 @@
-let StoredBass = []
-let contenu = 0
-const panier = document.getElementsByClassName('panier')
-storeBass()
+/* Reinitialisation du panier si on a passé une commande */
+if (localStorage['Commande'] != undefined){
+    localStorage.clear()
+}
 
+/* Bouton permettant l ouverture et la fermuture du burger menu */
 const burger = document.querySelector('.burger')
 burger.addEventListener('click', () => {
     burger.classList.toggle('active')
 });
+
+/* Partie du code permettant la mise a jour du nombre d article du panier dans la nav_bar */
+let StoredBass = []
+let contenu = 0
+const panier = document.getElementsByClassName('panier')
+storeBass()
 
 function storeBass(){
     for(let i in localStorage){
