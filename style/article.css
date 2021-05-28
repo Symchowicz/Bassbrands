@@ -29,9 +29,6 @@ h1{
     padding: 10px;
 }
 
-.titre{
-    font-size: 12px;
-}
 
 .descArticle article{
     display: flex;
@@ -55,9 +52,16 @@ h1{
 
 .btnPanier{
     cursor: pointer;
+    border-style: none;
+    border-radius: 20px;
+    background: #FDEF9C;
     padding: 5px;
     font-size: 10px;
     width: 100%;
+}
+
+.btnPanier:hover{
+    box-shadow: 3px 3px 3px grey;
 }
 
 .btnPanier img{
@@ -93,4 +97,104 @@ h1{
     flex-direction: column;
     width: 50%;
     gap: 1rem;
+}
+
+.notifAction{
+    display: none;
+    text-align: center;
+    font-size: 10px;
+    color: black;
+    background: #FDEF9C;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+@media(min-width: 768px){
+    h1{
+        padding: 15px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .chemin{
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .descArticle{
+        display: flex;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .imgBass{
+        height: 400px;
+        padding: 12px;
+    }
+
+    .divDesc{
+        gap: 10px;
+    }
+
+    .btnPanier{
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .btnPanier img{
+        width: 20px;
+    }
+
+    .voirPlus, .divArticleCarac, .notifAction{
+        font-size: 12px;
+    }
+
+}
+
+
+@media(min-width: 1024px){
+    h1{
+        padding: 15px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .chemin{
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .descArticle{
+        display: flex;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .imgBass{
+        height: 400px;
+        padding: 12px;
+    }
+
+    .divPrixBtn{
+        width: 40%;
+    }
+
+    .divDesc{
+        gap: 10px;
+    }
+
+    .btnPanier{
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .btnPanier img{
+        width: 25px;
+    }
+
+    .voirPlus, .divArticleCarac, .notifAction{
+        font-size: 16px;
+    }
 }

@@ -1,7 +1,7 @@
 const sectionChemin = document.querySelector(".chemin");
 const sectionDesc = document.querySelector(".descArticle");
 const sectionDetails = document.querySelector(".details");
-
+const  notif = document.querySelector('.notifAction');
 
 export function article(reference){
     let requestUrl = 'https://raw.githubusercontent.com/Symchowicz/Bassbrands/main/JS/bassData.json';
@@ -28,6 +28,8 @@ export function article(reference){
             }else{
                 localStorage.setItem(bassArticle.reference, JSON.stringify(bassArticle));
             }
+            notif.style.display="block";
+            window.setTimeout(unshowNotif,2000);
         });
         const voirPlus = document.querySelector('.voirPlus');
         voirPlus.addEventListener('click', ()=>{
@@ -39,11 +41,11 @@ export function article(reference){
                 sectionDetails.style.display = "none";
             }
         });
-
     }
 }
-
-
+function unshowNotif(){
+    notif.style.display= "none";
+}
 function loadArticle(jsonObj){
     let cheminBass = document.createElement('a');
     let imgBass = document.createElement('img');
@@ -141,5 +143,17 @@ function loadCaracteristique(jsonObj){
         divArticleCarac.appendChild(article1);
         divArticleCarac.appendChild(article2);
         sectionDetails.appendChild(divArticleCarac);
+    }else{
+        article1.appendChild(corps);
+        article1.appendChild(manche);
+        article1.appendChild(touche);
+        article1.appendChild(nbFrettes);
+        article2.appendChild(chevalet);
+        article2.appendChild(mecanique);
+        article2.appendChild(micro);
+        divArticleCarac.appendChild(article1);
+        divArticleCarac.appendChild(article2);
+        sectionDetails.appendChild(divArticleCarac);
     }
 }
+
