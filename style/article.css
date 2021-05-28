@@ -1,136 +1,96 @@
-main div ul{
+h1{
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chemin{
+    font-size: 10px;
+    padding: 10px;
+}
+
+.chemin a {
+    color: black;
+}
+
+.chemin a:hover{
+    text-decoration: underline;
+}
+
+.descArticle{
+    display: flex;
+    padding: 10px;
+    font-size: 10px;
+}
+
+.imgBass{
+    height: 300px;
+    padding: 10px;
+}
+
+.titre{
+    font-size: 12px;
+}
+
+.descArticle article{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.divDesc{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.divPrixBtn{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.btnPanier{
+    cursor: pointer;
+    padding: 5px;
+    font-size: 10px;
+    width: 100%;
+}
+
+.btnPanier img{
+    width: 15px;
+}
+
+.montrerCarac{
+    display: flex;
+    justify-content: center;
+}
+
+.voirPlus{
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    border-style: none;
+    background: white;
+}
+
+.details{
     display: none;
 }
 
-#retour{
-    font-family: roboto;
-    font-weight: bold;
-    font-size: 20px; 
-}
-
-#Bass{
-    margin: 20px 20px ;
-    height: 300px;
-}
-
-article{
+.divArticleCarac{
     display: flex;
-    flex-direction: row;
+    font-size: 10px;
+    gap: 20px;
 }
 
-h1{
-    font-size: 16px; 
-}
-
-h2{
-    padding: 10px 0 10px 0;
-    font-size: 14px;
-}
-
-#description{
-    margin: 0 10px 10px 0;
-    font-family: roboto;
-    font-size: 12px;
-    text-align: justify;
-}
-
-#coté_panier{
+.article1, .article2{
     display: flex;
     flex-direction: column;
-    margin: 20px 50px 0 0;
-    float: right;
-}
-
-#prix{
-    font-family: roboto;
-    font-weight: bold;
-    font-size: 20px; 
-}
-
-#prix_initial{
-    font-family: roboto;
-    font-weight: bold;
-    font-size: 18px; 
-}
-
-#bouton_panier{
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #FDEF9C;
-    border: 1mm ridge #FDEF9C;
-    border-radius:20px;
-    width: 100px;
-    height: 4vh;
-}
-
-@media(min-width: 768px){
-    #retour{
-        display: none;
-    }
-
-    main div ul{
-        display: flex;
-        flex-direction: row;
-        font-family: roboto;
-        font-weight: bold;
-        font-size: 12px;
-        margin-bottom:20px ;
-    }  
-
-    main div ul li{
-        margin-right: 5px
-    }
-
-    h1{
-        font-size: 22px; 
-    }
-    
-    h2{
-        margin: 10px 0 5px 0;
-        font-size: 20px;
-    }
-    
-    #description{
-        font-size: 16px;
-    }
-
-    #prix{
-        font-size: 24px; 
-    }
-    
-    #prix_initial{
-        font-size: 20px; 
-    }
-
-    #bouton_panier{
-        width: 200px;
-        height: 6vh;
-    }
-}
-
-/*---- Responsive PC ----*/
-@media(min-width: 1024px){
-    h1{
-        font-size: 22px; 
-    }
-    
-    h2{
-        margin: 10px 0 5px 0;
-        font-size: 20px;
-    }
-    
-    #description{
-        font-size: 16px;
-    }
-
-    #prix{
-        font-size: 24px; 
-    }
-    
-    #prix_initial{
-        font-size: 20px; 
-    }
+    width: 50%;
+    gap: 1rem;
 }
