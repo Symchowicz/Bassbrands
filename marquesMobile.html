@@ -4,31 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bassbrands - Fender Bass Artic Pearl</title>
+    <title>Bassbrands - Accueil</title>
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <link rel="stylesheet" href="style/nav_bar.css">
+    <link rel="stylesheet" href="style/marqueMobile.css">
     <link rel="stylesheet" href="style/footer.css">
-    <link rel="stylesheet" href="style/article.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.html" title="page d'accueil"> <img id="logo" src="./pics/Logo Bassbrands.svg" alt="Logo Bassbrands"></a>
         </div>
-        <nav class="menu">
-            <ul class="menu-list">
-                <li>Rechercher</li>
-                <li><a href="index.html">Accueil</a></li>
-                <li class="dropdown">
-                    <button class="dropdownBtn">Nos Marques</button>
-                    <div class="dropdown-content">
-                        <a href="Fender.html">Fender</a>
-                        <a href="Cort.html">Cort</a>
-                    </div>
-                </li>
-                <li><a class ='panier' href="panier.html">Panier<img class="iconPanier" src="./pics/panier.svg" alt="panier"></a></li>
-            </ul>
-        </nav>
         <div class="burger">
             <span></span>
             <div>
@@ -40,18 +26,26 @@
         </div>
     </header>
     <main>
-        <section class="chemin">
-            <a href="">Nos Marques</a> >
-            <a href="Fender.html">Fender </a> >
-        </section>
-        <section class="descArticle">
+        <section class = "marque">
+            <h1>Les différentes marques de Bass</h1>
+            <div class="banniere">
+                <a href="Cort.html">
+                    <article id = "backgroundCort" >
+                        <img id = "Cort" src="./pics/Cort_logo 2.png" alt="Cort logo">
+                    </article>
+                </a>
 
-        </section>
-        <p class="notifAction">Vous avez ajouté un élèment au panier</p>
-        <div class="montrerCarac">
-            <button class="voirPlus">Voir les caractéristiques</button>
-        </div>
-        <section class="details">
+                <a href="Fender.html">
+                    <article id = "backgroundFender">
+                        <img id = "Fender" src="./pics/Fender_logo.png" alt="Fender logo">
+                    </article>
+                </a>
+                <a class="disable" style="cursor: not-allowed">
+                    <article id = "backgroundGibson">
+                        <img id = "Gibson" src="./pics/Gibson_logo.png" alt="Gibson logo">
+                    </article>
+                </a>
+            </div>
         </section>
     </main>
     <footer>
@@ -73,8 +67,4 @@
     </footer>
 </body>
 <script type="text/javascript" src="./JS/burger.js"></script>
-<script type="module">
-    import {article} from "./JS/article.js";
-    article("019-9012-781");
-</script>
 </html>
