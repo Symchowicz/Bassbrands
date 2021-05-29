@@ -53,6 +53,7 @@ function loadArticle(storedBass){
                 plus.innerHTML = '+'
 
                 var prixArticle = document.createElement('span')
+                prixArticle.id = "prixArticle" + i
                 prixArticle.innerHTML = storedBass[i].prix * storedBass[i].qte + "€"
 
                 const poubelle = document.createElement('img')
@@ -287,6 +288,7 @@ function setButton(storedBass){
                 const moins0 = document.getElementById('moins' + i)
                 const plus0 = document.getElementById('plus' + i)
                 const quantite0 = document.getElementById('quantite0')
+                const prixArticle0 = document.getElementById("prixArticle0")
                 if(poubelle0 != null){
                     const boutonCommande = document.getElementById('boutonCommande')
                     const formulaire = document.getElementById('formulaireOff')
@@ -294,7 +296,7 @@ function setButton(storedBass){
                     const paiement = document.getElementById('paiement')
                     const selectLivraison = document.querySelector('select')
                     const prixLivraison = document.getElementById('prixLivraison')
-                    const prixAvantLivraison = document.getElementById('prixAvantLivraison').getAttribute('data-value')
+                    let prixAvantLivraison = document.getElementById('prixAvantLivraison').getAttribute('data-value')
                     const prixAvecLivraison = document.getElementById('prixAvecLivraison')
                     const nom = document.getElementById('nom')
                     const prenom = document.getElementById('prenom')
@@ -310,13 +312,13 @@ function setButton(storedBass){
                             window.location.reload()
                         }else{
                             localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                            quantite0.innerHTML = storedBass[i].qte
+                            window.location.reload()
                         }
                     });
                     plus0.addEventListener('click', () => {  
                         storedBass[i].qte++
                         localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        quantite0.innerHTML = storedBass[i].qte
+                        window.location.reload()
                     });
                     poubelle0.addEventListener('click', () => {  
                         localStorage.removeItem(storedBass[i].reference)
@@ -372,13 +374,13 @@ function setButton(storedBass){
                             window.location.reload()
                         }else{
                             localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                            quantite[i-1].innerHTML = storedBass[i].qte
+                            window.location.reload()
                         }
                     });
                     plus.addEventListener('click', () => {
                         storedBass[i].qte++
                         localStorage.setItem(storedBass[i].reference, JSON.stringify(storedBass[i]))
-                        quantite[i-1].innerHTML = storedBass[i].qte
+                        window.location.reload()
                     });
                     poubelle.addEventListener('click', () => {  
                         localStorage.removeItem(storedBass[i].reference)

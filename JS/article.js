@@ -45,6 +45,7 @@ export function article(reference){
 }
 function unshowNotif(){
     notif.style.display= "none";
+    window.location.reload()
 }
 function loadArticle(jsonObj){
     let cheminBass = document.createElement('a');

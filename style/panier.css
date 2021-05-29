@@ -20,8 +20,7 @@ article{
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
-    background-color: #FDEF9C;
-    border: solid black;
+    border: 1px solid;
 }
 
 article > div:last-of-type{
@@ -102,7 +101,6 @@ main > section:first-of-type{
     margin: auto;
     padding-top: 15px;
     background-color: #FDEF9C;
-    border: 1mm ridge #FDEF9C;
     border-radius:20px;
     width: 50vw;
     height: 35px;
