@@ -28,9 +28,10 @@ Le nom du projet, BassBrands, vient du principe que notre site rassemble toutes 
 Nous avons fait en sorte de bien séparer les différents langages. Lors de la réalisation du style, nous avons décidé de commencer sous format mobile, puis tablette et enfin PC.
 
 ### REPARTITION DU TRAVAIL
-Giselle s’est occupée des pages article et marque, du json et a beaucoup participé au debug global du site, notamment au niveau du panier.
+Giselle s’est occupée des pages article et marque, du json et a fait le début de la page Panier en pair programming + débug.
 
 Benjamin s’est occupé de la Homepage ainsi que du panier.
+
 
 ### SOURCES :
 Pour les images et données des bass, nous avons utilisé le site www.woodbrass.com
