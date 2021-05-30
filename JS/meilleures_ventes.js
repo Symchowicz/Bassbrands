@@ -1,4 +1,10 @@
-var bestseller = document.querySelector('.produit');
+/*Sources :
+* https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
+* https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+*
+* */
+
+let bestseller = document.querySelector('.produit');
 
 let requestUrl = 'https://raw.githubusercontent.com/Symchowicz/Bassbrands/main/JS/bassData.json';
 let request = new XMLHttpRequest();
@@ -9,7 +15,7 @@ request.send();
 
 request.onload = function (){
     var data = request.response;
-    Article(data)
+    Article(data);
 }
 
 function getMaxTableau(tableauNumérique) {
@@ -17,29 +23,29 @@ function getMaxTableau(tableauNumérique) {
 }
 
 function Article(jsonObj){
-    var listeNbVente = []
+    var listeNbVente = [];
     for(let i=0; i <= 5; i++){
-        listeNbVente.push(jsonObj[i]['nbVente'])
+        listeNbVente.push(jsonObj[i]['nbVente']);
     }
 
-    var max1 = 0
-    var max2 = 0
-    var max3 = 0
-    max1 = getMaxTableau(listeNbVente)      
-    listeNbVente = listeNbVente.filter(item => item !== max1)
+    var max1 = 0;
+    var max2 = 0;
+    var max3 = 0;
+    max1 = getMaxTableau(listeNbVente);
+    listeNbVente = listeNbVente.filter(item => item !== max1);
 
-    max2 = getMaxTableau(listeNbVente)      
-    listeNbVente = listeNbVente.filter(item => item !== max2)
+    max2 = getMaxTableau(listeNbVente);
+    listeNbVente = listeNbVente.filter(item => item !== max2);
 
-    max3 = getMaxTableau(listeNbVente)      
-    listeNbVente = listeNbVente.filter(item => item !== max3)
+    max3 = getMaxTableau(listeNbVente);
+    listeNbVente = listeNbVente.filter(item => item !== max3);
 
-    listeNbVente = []
+    listeNbVente = [];
     for(let i=0; i <= 5; i++){
-        listeNbVente.push(jsonObj[i]['nbVente'])
+        listeNbVente.push(jsonObj[i]['nbVente']);
     }
 
-    listeMax = [max1,max2,max3]
+    listeMax = [max1,max2,max3];
     for(var i =0; i < jsonObj.length; i++){
         var myArticle = document.createElement('article');
         var myLink = document.createElement('a');
@@ -57,14 +63,14 @@ function Article(jsonObj){
         myImage.classList.add('myImage');
         libelle.classList.add('nom');
         infos.classList.add('infos');
-        infoPrix.classList.add('infoPrix')
+        infoPrix.classList.add('infoPrix');
         prix.classList.add('prix');
         prixInitial.classList.add('prixInitial');
         infoDispo.classList.add('infoDispo');
         stock.classList.add('stock');
         ref.classList.add('reference');
 
-        index = listeNbVente.indexOf(listeMax[i])
+        index = listeNbVente.indexOf(listeMax[i]);
         // contenu des balises
         myLink.setAttribute('href', jsonObj[index].marque+i+".html");
         console.log(myLink);
@@ -79,7 +85,7 @@ function Article(jsonObj){
         }
         ref.textContent = "Réf : " + jsonObj[index].reference;
 
-        myLink.appendChild(myImage)
+        myLink.appendChild(myImage);
         myLink.appendChild(myImage);
         myLink.appendChild(libelle);
         infoPrix.appendChild(prix);

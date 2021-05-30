@@ -1,3 +1,11 @@
+/* Sources :
+* https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/export
+* https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/import
+* https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+* https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
+* https://developer.mozilla.org/fr/docs/Web/API/Location/reload
+* */
+
 const sectionChemin = document.querySelector(".chemin");
 const sectionDesc = document.querySelector(".descArticle");
 const sectionDetails = document.querySelector(".details");

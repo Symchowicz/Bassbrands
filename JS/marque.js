@@ -1,5 +1,5 @@
-var presentation = document.querySelector('.presentation');
-var section = document.querySelector(".produit");
+let presentation = document.querySelector('.presentation');
+let section = document.querySelector(".produit");
 /*-- Appel du fichier JSON --*/
 let requestUrl = 'https://raw.githubusercontent.com/Symchowicz/Bassbrands/main/JS/bassData.json';
 let request = new XMLHttpRequest();
@@ -10,7 +10,7 @@ request.send();
 
 /*-- --*/
 request.onload = function (){
-    var data = request.response;
+    let data = request.response;
     brandFilter(data);
 }
 
@@ -34,25 +34,25 @@ function brandFilter(jsonObj){
 
 /* Fonction qui gere tout ce qui est affichage */
 function showBass(bass){
-    for(var i =0; i < bass.length; i++){
+    for(let i =0; i < bass.length; i++){
         // Création des balises html
-        var myArticle = document.createElement('article');
-        var myLink = document.createElement('a');
-        var myImage = document.createElement('div');
-        var libelle = document.createElement('h2');
-        var infos = document.createElement('div');
-        var infoPrix = document.createElement('div');
-        var prix = document.createElement('p');
-        var prixInitial = document.createElement('p');
-        var infoDispo = document.createElement('div');
-        var stock = document.createElement('p');
-        var ref = document.createElement('p');
+        let myArticle = document.createElement('article');
+        let myLink = document.createElement('a');
+        let myImage = document.createElement('div');
+        let libelle = document.createElement('h2');
+        let infos = document.createElement('div');
+        let infoPrix = document.createElement('div');
+        let prix = document.createElement('p');
+        let prixInitial = document.createElement('p');
+        let infoDispo = document.createElement('div');
+        let stock = document.createElement('p');
+        let ref = document.createElement('p');
 
         //Attribution de class
         myImage.classList.add('myImage');
         libelle.classList.add('nom');
         infos.classList.add('infos');
-        infoPrix.classList.add('infoPrix')
+        infoPrix.classList.add('infoPrix');
         prix.classList.add('prix');
         prixInitial.classList.add('prixInitial');
         infoDispo.classList.add('infoDispo');

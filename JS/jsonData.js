@@ -1,3 +1,7 @@
+/* Sources
+* https://developer.mozilla.org/fr/docs/Learn/JavaScript/Objects/JSON
+ */
+
 var requestUrl = 'https://raw.githubusercontent.com/Symchowicz/Bassbrands/main/JS/bassData.json';
 
 var request = new XMLHttpRequest();
