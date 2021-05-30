@@ -4,14 +4,14 @@ article > div > img{
 }
 
 h1{
-    font-size: 20px;
+    font-size: 14px;
     font-family: roboto;
     font-weight: bold; 
     margin: 10px 0 30px 10px;
 }
 
 h2{
-    font-size: 16px;
+    font-size: 12px;
     font-family: roboto;
     font-weight: bold; 
 }
@@ -30,7 +30,7 @@ article > div:last-of-type{
 }
 
 article > div:last-of-type > div:first-of-type > span{
-    font-size: 14px;    
+    font-size: 10px;    
 }
 
 article > div:last-of-type > div:last-of-type{
@@ -38,18 +38,18 @@ article > div:last-of-type > div:last-of-type{
     flex-direction: column;
     justify-content: center;
     text-align: right;
-    width: 45vw;
+    width: 50vw;
 }
 
 article > div:last-of-type > div:last-of-type > div:first-of-type{
     display: flex;
     justify-content: space-between;
     margin: 0 0 5px 5px;
-    width: 100px;
+    width: 72px;
 }
 
 article > div:last-of-type > div:last-of-type > div:first-of-type >span{
-    font-size: 20px;
+    font-size: 10px;
     font-family: roboto;
     font-weight: bold;
 }
@@ -60,18 +60,18 @@ article > div:last-of-type > div:last-of-type > div:last-of-type{
 }
 
 article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
-    font-size: 16px;
+    font-size: 10px;
     font-family: roboto;
     font-weight: bold;
 }
 
 #plus0, #plus1, #plus2, #plus3, #plus4, #plus5 {
-    font-size: 20px;
+    font-size: 10px;
     margin: 0 25px 0 5px;
 }
 
 #moins0, #moins1, #moins2, #moins3, #moins4, #moins5{
-    font-size: 20px;
+    font-size: 10px;
     padding: 0 5px 0 5px;
 }
 
@@ -82,7 +82,7 @@ article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
 }
 
 main > div{
-    font-size: 18px;
+    font-size: 10px;
     font-family: roboto;
     font-weight: bold;
 }
@@ -137,13 +137,14 @@ main > section:first-of-type{
 #formulaireOn > form > div{
     font-family: roboto;
     margin: 5px;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 #formulaireOn > form > section > div{
     display:flex;
     flex-direction: column;
     margin: 5px 10px;
+    font-size: 14px;
 }
 input{
     width: 38vw;
@@ -172,7 +173,7 @@ input{
 #select{
     margin: 0 0 15px 25vw;
     width: 38vw;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 form > section:nth-of-type(4) > div{
@@ -180,11 +181,11 @@ form > section:nth-of-type(4) > div{
 }
 
 form > section:nth-of-type(4) > div:first-child{
-    font-size: 20px;
+    font-size: 10px;
 }
 #prixAvantLivraison, #prixLivraison, #prixAvecLivraison{
     padding-left: 10px ;
-    font-size: 18px;
+    font-size: 10px;
 }
 
 #SectionBouton{
@@ -197,13 +198,12 @@ form > section:nth-of-type(4) > div:first-child{
 
 #retour, #paiement {
     font-family: roboto;
-    font-size: 20px;
+    font-size: 10px;
     cursor: pointer;
     text-align: center;
     margin: auto;
     padding-top: 15px;
     background-color: #FDEF9C;
-    border: 1mm ridge #FDEF9C;
     border-radius:20px;
     width: 30vw;
     height: 4vh;
@@ -218,11 +218,11 @@ form > section:nth-of-type(4) > div:first-child{
     }
 
     h1{
-        font-size: 25px;
+        font-size: 16px;
     }
 
     h2{
-        font-size: 20px;
+        font-size: 14px;
     }
 
     article > div:last-of-type > div:last-of-type{
@@ -230,7 +230,7 @@ form > section:nth-of-type(4) > div:first-child{
     }
     
     article > div:last-of-type > div:first-of-type > span{
-        font-size: 18px;    
+        font-size: 12px;    
     }
 
     #poubelle0, #poubelle1, #poubelle2, #poubelle3, #poubelle4, #poubelle5 {
@@ -238,61 +238,64 @@ form > section:nth-of-type(4) > div:first-child{
     }
 
     article > div:last-of-type > div:last-of-type > div:first-of-type >span{
-        font-size: 23px;
+        font-size: 12px;
     }
 
     article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
-        font-size: 20px;
+        font-size: 12px;
     }
 
     article > div:last-of-type > div:last-of-type > div:first-of-type{
-        width: 205px;
+        width: 170px;
     }
 
     #plus0, #plus1, #plus2, #plus3, #plus4, #plus5 {
-        font-size: 24px;
+        font-size: 12px;
         margin: 0 115px 0 5px;
         cursor: pointer;
     }
     #moins0, #moins1, #moins2, #moins3, #moins4, #moins5{
-        font-size: 24px;
+        font-size: 12px;
         padding: 0 5px 0 5px;
         cursor: pointer;
     }
     main > div{
-        font-size: 22px;
+        font-size: 12px;
     }
 
     #reinitialiser,#boutonCommande{
         padding: 10px;
         width: 26vw;
         height: 2vh;
-        font-size: 20px;
+        font-size: 12px;
     }
 
     label {
-        font-size: 20px;
+        font-size: 12px;
         padding-left: 8px;
     }
 
     #select{
     margin: 0 0 15px 25vw;
     width: 38vw;
-    font-size: 18px;
+    font-size: 12px;
     }
 
     #formulaireOn > form > div{
         margin: 20px;
-        font-size: 25px;
+        font-size: 16px;
     }
 
     form > section:nth-of-type(4) > div:first-child{
         padding-left: 10px;
-        font-size: 25px;
+        font-size: 12px;
     }
     #prixAvantLivraison, #prixLivraison, #prixAvecLivraison{
-        font-size: 22px;
+        font-size: 12px;
         padding: 5px 0 5px 30px;
+    }
+    #formulaireOn > form > section > div{
+        font-size: 14px;
     }
 }
 
@@ -304,11 +307,11 @@ form > section:nth-of-type(4) > div:first-child{
     }
 
     h1{
-        font-size: 35px;
+        font-size: 20px;
     }
 
     h2{
-        font-size: 29px;
+        font-size: 18px;
     }
 
     article{
@@ -316,7 +319,7 @@ form > section:nth-of-type(4) > div:first-child{
     }
 
     article > div:last-of-type > div:first-of-type > span{
-        font-size: 20px;    
+        font-size: 16px;    
     }
 
     #poubelle0, #poubelle1, #poubelle2, #poubelle3, #poubelle4, #poubelle5 {
@@ -324,25 +327,25 @@ form > section:nth-of-type(4) > div:first-child{
     }
 
     article > div:last-of-type > div:last-of-type > div:first-of-type >span{
-        font-size: 28px;
+        font-size: 16px;
     }
 
     article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
-        font-size: 25px;
+        font-size: 16px;
     }
 
     article > div:last-of-type > div:last-of-type > div:first-of-type{
-        width: 305px;
+        width: 270px;
     }
 
     #plus0, #plus1, #plus2, #plus3, #plus4, #plus5 {
-        font-size: 24px;
+        font-size: 16px;
         margin: 0 200px 0 5px;
         cursor: pointer;
     }
 
     #moins0, #moins1, #moins2, #moins3, #moins4, #moins5{
-        font-size: 24px;
+        font-size: 16px;
         padding: 0 5px 0 5px;
         cursor: pointer;
     }
@@ -353,14 +356,14 @@ form > section:nth-of-type(4) > div:first-child{
     }
 
     main > div{
-        font-size: 26px;
+        font-size: 16px;
     }
 
     #reinitialiser,#boutonCommande{
         padding: 10px;
         width: 23vw;
         height: 2vh;
-        font-size: 25px;
+        font-size: 16px;
     }
 
     main > section:first-of-type{
@@ -368,14 +371,14 @@ form > section:nth-of-type(4) > div:first-child{
     }
 
     label {
-        font-size: 25px;
+        font-size: 16px;
         padding-left: 8px;
     }
     
     #select{
         margin: 0 0 15px 27vw;
         width: 300px;
-        font-size:20px;
+        font-size: 16px;
     }
 
     input{
@@ -384,26 +387,29 @@ form > section:nth-of-type(4) > div:first-child{
 
     #formulaireOn > form > div{
         margin: 20px;
-        font-size: 30px;
+        font-size: 20px;
     }
 
     form > section:nth-of-type(4) > div:first-child{
         padding-left: 10px;
-        font-size: 30px;
+        font-size: 16px;
     }
     #prixAvantLivraison, #prixLivraison, #prixAvecLivraison{
-        font-size: 25px;
+        font-size: 16px;
         padding: 5px 0 5px 30px;
+    }
+    #formulaireOn > form > section > div{
+        font-size: 16px;
     }
 }
 
 @media(min-width: 1440px){
     h1{
-        font-size: 35px;
+        font-size: 24px;
     }
 
     h2{
-        font-size: 29px;
+        font-size: 22px;
     }
 
     article > div:last-of-type > div:last-of-type{
@@ -419,24 +425,24 @@ form > section:nth-of-type(4) > div:first-child{
     }
 
     article > div:last-of-type > div:last-of-type > div:first-of-type >span{
-        font-size: 28px;
+        font-size: 20px;
     }
 
     article > div:last-of-type > div:last-of-type > div:last-of-type > div span {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     article > div:last-of-type > div:last-of-type > div:first-of-type{
-        width: 305px;
+        width: 285px;
     }
 
     #plus0, #plus1, #plus2, #plus3, #plus4, #plus5 {
-        font-size: 24px;
+        font-size: 20px;
         margin: 0 200px 0 5px;
         cursor: pointer;
     }
     #moins0, #moins1, #moins2, #moins3, #moins4, #moins5{
-        font-size: 24px;
+        font-size: 20px;
         padding: 0 5px 0 5px;
         cursor: pointer;
     }
@@ -445,7 +451,7 @@ form > section:nth-of-type(4) > div:first-child{
         padding: 10px;
         width: 23vw;
         height: 2vh;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     main > section:first-of-type{
@@ -454,14 +460,14 @@ form > section:nth-of-type(4) > div:first-child{
 
 
     label {
-        font-size: 25px;
+        font-size: 20px;
         padding-left: 8px;
     }
     
     #select{
         margin: 0 0 15px 30vw;
         width: 350px;
-        font-size:25px;
+        font-size:20px;
     }
 
     input{
@@ -470,15 +476,18 @@ form > section:nth-of-type(4) > div:first-child{
 
     #formulaireOn > form > div{
         margin: 20px;
-        font-size: 35px;
+        font-size: 24px;
     }
 
     form > section:nth-of-type(4) > div:first-child{
         padding-left: 10px;
-        font-size: 35px;
+        font-size: 24px;
     }
     #prixAvantLivraison, #prixLivraison, #prixAvecLivraison{
-        font-size: 30px;
+        font-size: 22px;
         padding: 5px 0 5px 30px;
+    }
+    #formulaireOn > form > section > div{
+        font-size: 20px;
     }
 }
