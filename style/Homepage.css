@@ -91,11 +91,21 @@ h1{
     h1{
         font-size: 20px;
     }
+
     .presentationSite div{
         font-size:24px;
     }
+
     .bestseller{
         display: grid;
         grid-template-columns: repeat(3, 200px);
+    }
+
+    .banniere{
+        width: 54vw;
+        margin: auto;
+    }
+    .banniere article{
+        height: 15vw;
     }
 }
